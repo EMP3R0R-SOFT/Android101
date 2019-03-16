@@ -32,7 +32,7 @@
         <activity android:name="com.example.android101._4_ListView_example" />
         <activity android:name="com.example.android101._3_UseClass2_example" />
         <activity android:name="com.example.android101._2_UseClass_example" />
-        <activity android:name="com.example.android101._0_HomePage" />
+        <activity android:name="com.example.android101._0_HomePage" android:theme="@style/Transparent"/>
         <activity android:name="com.example.android101._1_SharedPreferences_example" />
     </application>
 

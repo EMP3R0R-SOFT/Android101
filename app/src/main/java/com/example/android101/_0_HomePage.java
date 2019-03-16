@@ -2,6 +2,7 @@ package com.example.android101;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,9 +30,14 @@ public class _0_HomePage extends AppCompatActivity {
         //SetWall.set(this);
 
 
-        View l1 = findViewById(R.id.linearlayout1);
-        Animation anim_fade_in = AnimationUtils.loadAnimation(this,R.anim.fade_in_2);
-        l1.startAnimation(anim_fade_in);
+                View l1 = findViewById(R.id.linearlayout1);
+                Animation anim_fade_in = AnimationUtils.loadAnimation(getBaseContext(),R.anim.fade_in_500);
+                anim_fade_in.setStartOffset(1000);
+                l1.startAnimation(anim_fade_in);
+
+
+
+
 
 
 
@@ -127,6 +133,14 @@ public class _0_HomePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getBaseContext(), _12_Play_Video.class));
+            }
+        });
+
+        final Button button12 = findViewById(R.id.button12);
+        button12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
 

@@ -7,4 +7,5 @@
     <color name="MyRED">#E90C0C</color>
     <color name="Gray">#262626</color>
     <color name="btn_color_1">#808080</color>
+    <color name="Transparent">#00000000</color>
 </resources>

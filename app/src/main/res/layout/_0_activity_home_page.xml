@@ -10,14 +10,14 @@
     >
 
 
-<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:layout_height="wrap_content"
     android:layout_marginTop="3dp"
-    android:id="@+id/linearlayout1">
+    android:id="@+id/linearlayout1"
+    >
+
 
 
     <TextView
@@ -36,291 +36,219 @@
         android:id="@+id/button1"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="7dp"
-        android:layout_marginBottom="5dp"
         android:background="@drawable/btn_theme_1"
         android:paddingStart="10dp"
         android:text="Example:       Shared Preferences"
-        android:textAlignment="viewStart"
+        android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/btn_color_1"
-        android:textSize="18sp" />
+        android:textSize="12sp" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="7dp"
-        android:layout_marginBottom="5dp"
         android:background="@drawable/btn_theme_1"
         android:paddingStart="10dp"
         android:text="Example:       Use Class 1"
-        android:textAlignment="viewStart"
+        android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/btn_color_1"
-        android:textSize="18sp" />
+        android:textSize="12sp" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="7dp"
-        android:layout_marginBottom="5dp"
         android:background="@drawable/btn_theme_1"
         android:paddingStart="10dp"
         android:text="Example:       Use Class 2"
-        android:textAlignment="viewStart"
+        android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/btn_color_1"
-        android:textSize="18sp" />
+        android:textSize="12sp" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="7dp"
-        android:layout_marginBottom="5dp"
         android:background="@drawable/btn_theme_1"
         android:paddingStart="10dp"
         android:text="Example:      List View"
-        android:textAlignment="viewStart"
+        android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/btn_color_1"
-        android:textSize="18sp" />
+        android:textSize="12sp" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="7dp"
-        android:layout_marginBottom="5dp"
         android:background="@drawable/btn_theme_1"
         android:paddingStart="10dp"
         android:text="Example:      Dialog Alert"
-        android:textAlignment="viewStart"
+        android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/btn_color_1"
-        android:textSize="18sp" />
+        android:textSize="12sp" />
 
     <Button
         android:id="@+id/button6"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="7dp"
-        android:layout_marginBottom="5dp"
         android:background="@drawable/btn_theme_1"
         android:paddingStart="10dp"
         android:text="Example:      Async Task"
-        android:textAlignment="viewStart"
+        android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/btn_color_1"
-        android:textSize="18sp" />
+        android:textSize="12sp" />
 
     <Button
         android:id="@+id/button7"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="7dp"
-        android:layout_marginBottom="5dp"
         android:background="@drawable/btn_theme_1"
         android:paddingStart="10dp"
         android:text="Example:      Dynamic Buttons"
-        android:textAlignment="viewStart"
+        android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/btn_color_1"
-        android:textSize="18sp" />
+        android:textSize="12sp" />
 
     <Button
         android:id="@+id/button8"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="7dp"
-        android:layout_marginBottom="5dp"
         android:background="@drawable/btn_theme_1"
         android:paddingStart="10dp"
         android:text="Example:      Pass Data (using intent)"
-        android:textAlignment="viewStart"
+        android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/btn_color_1"
-        android:textSize="18sp" />
+        android:textSize="12sp" />
 
     <Button
         android:id="@+id/button9"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="7dp"
-        android:layout_marginBottom="5dp"
         android:background="@drawable/btn_theme_1"
         android:paddingStart="10dp"
         android:text="Example:      TEST"
-        android:textAlignment="viewStart"
+        android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/btn_color_1"
-        android:textSize="18sp" />
+        android:textSize="12sp" />
 
 
     <Button
         android:id="@+id/button10"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="7dp"
-        android:layout_marginBottom="5dp"
         android:background="@drawable/btn_theme_1"
         android:paddingStart="10dp"
         android:text="Example 11:      Simple ListView"
-        android:textAlignment="viewStart"
+        android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/btn_color_1"
-        android:textSize="18sp" />
+        android:textSize="12sp" />
 
 
     <Button
         android:id="@+id/button11"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="7dp"
-        android:layout_marginBottom="5dp"
         android:background="@drawable/btn_theme_1"
         android:paddingStart="10dp"
         android:text="Example X:      Play Video"
-        android:textAlignment="viewStart"
+        android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/btn_color_1"
-        android:textSize="18sp" />
+        android:textSize="12sp" />
 
     <Button
         android:id="@+id/button12"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="7dp"
-        android:layout_marginBottom="5dp"
         android:background="@drawable/btn_theme_1"
         android:paddingStart="10dp"
         android:text="Example X:      Empty"
-        android:textAlignment="viewStart"
+        android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/btn_color_1"
-        android:textSize="18sp" />
+        android:textSize="12sp" />
 
     <Button
         android:id="@+id/button13"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="7dp"
-        android:layout_marginBottom="5dp"
         android:background="@drawable/btn_theme_1"
         android:paddingStart="10dp"
         android:text="Example X:      Empty"
-        android:textAlignment="viewStart"
+        android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/btn_color_1"
-        android:textSize="18sp" />
+        android:textSize="12sp" />
 
     <Button
         android:id="@+id/button14"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="7dp"
-        android:layout_marginBottom="5dp"
         android:background="@drawable/btn_theme_1"
         android:paddingStart="10dp"
         android:text="Example X:      Empty"
-        android:textAlignment="viewStart"
+        android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/btn_color_1"
-        android:textSize="18sp" />
+        android:textSize="12sp" />
 
     <Button
         android:id="@+id/button15"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="7dp"
-        android:layout_marginBottom="5dp"
         android:background="@drawable/btn_theme_1"
         android:paddingStart="10dp"
         android:text="Example X:      Empty"
-        android:textAlignment="viewStart"
+        android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/btn_color_1"
-        android:textSize="18sp" />
+        android:textSize="12sp" />
 
     <Button
         android:id="@+id/button16"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="7dp"
-        android:layout_marginBottom="5dp"
         android:background="@drawable/btn_theme_1"
         android:paddingStart="10dp"
         android:text="Example X:      Empty"
-        android:textAlignment="viewStart"
+        android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/btn_color_1"
-        android:textSize="18sp" />
+        android:textSize="12sp" />
 
     <Button
         android:id="@+id/button17"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="7dp"
-        android:layout_marginBottom="5dp"
         android:background="@drawable/btn_theme_1"
         android:paddingStart="10dp"
         android:text="Example X:      Empty"
-        android:textAlignment="viewStart"
+        android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/btn_color_1"
-        android:textSize="18sp" />
+        android:textSize="12sp" />
 
     <Button
         android:id="@+id/button18"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="7dp"
-        android:layout_marginBottom="5dp"
         android:background="@drawable/btn_theme_1"
         android:paddingStart="10dp"
         android:text="Example X:      Empty"
-        android:textAlignment="viewStart"
+        android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/btn_color_1"
-        android:textSize="18sp" />
+        android:textSize="12sp" />
 
 
 

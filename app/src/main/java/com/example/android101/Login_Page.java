@@ -3,7 +3,6 @@ package com.example.android101;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
-import android.app.ActivityOptions;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.graphics.Color;
@@ -11,7 +10,6 @@ import android.graphics.PorterDuff;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Layout;
 import android.transition.Explode;
 import android.transition.Transition;
 import android.view.View;
@@ -20,7 +18,6 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 
@@ -55,7 +52,7 @@ public class Login_Page extends AppCompatActivity {
 
     private void StartAnim() {
 
-        Animation anim_fade_in = AnimationUtils.loadAnimation(this,R.anim.fade_in_1);
+        Animation anim_fade_in = AnimationUtils.loadAnimation(this,R.anim.fade_in_content_1);
         View container = findViewById(R.id.container1);
         EditText user = findViewById(R.id.btn_username);
         //user.startAnimation(anim_fade_in);
@@ -70,11 +67,16 @@ public class Login_Page extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                animationButtonWidth();
-                fadeOut_Text_setProgress();
-//                Intent intent = new Intent(getBaseContext(), _0_HomePage.class);
-//                startActivity(intent);
-//                finish();
+//                animationButtonWidth();
+//                fadeOut_Text_setProgress();
+
+
+
+                Intent intent = new Intent(getBaseContext(), _0_HomePage.class);
+                //ActivityOptions trans1 = ActivityOptions.makeSceneTransitionAnimation(this).toBundle();
+                startActivity(intent);
+                //overridePendingTransition(R.anim.fade_in_1000,R.anim.fade_out_1000);
+                overridePendingTransition(R.anim.fade_in_1000,R.anim.fade_out_1000);
             }
         });
     }
@@ -123,15 +125,12 @@ public class Login_Page extends AppCompatActivity {
             @Override
             public void run() {
 
-                Intent intent = new Intent(getBaseContext(), _0_HomePage.class);
-                //ActivityOptions trans1 = ActivityOptions.makeSceneTransitionAnimation(this).toBundle();
-                startActivity(intent);
-                overridePendingTransition(R.anim.fade_in_2,R.anim.fade_out_2);
+
 
 
                 //reveal_background();
             }
-        },1500);
+        },10);
 
     }
 

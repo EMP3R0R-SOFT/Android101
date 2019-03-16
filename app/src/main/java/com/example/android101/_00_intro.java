@@ -15,7 +15,7 @@ public class _00_intro extends AppCompatActivity {
         SystemClock.sleep(500);
         Intent intent = new Intent(this, Login_Page.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.fade_in_2,R.anim.fade_out_2);
+        overridePendingTransition(R.anim.fade_in_1000,R.anim.fade_out_1000);
         finish();
     }
 }
