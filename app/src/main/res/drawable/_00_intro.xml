@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#fff">
+
+
+
+    <!--<item android:drawable="@color/Gray"/>-->
+    <item>
+        <bitmap android:src="@drawable/wall_blur_1"></bitmap>
+
+    </item>
+
+
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/logo_1"/>
+            </item>
+
+
+</layer-list>

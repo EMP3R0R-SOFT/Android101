@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Android 101</string>
+    <string name="click_me">Click Me</string>
+    <string name="_0">0</string>
+    <string name="read">Read</string>
+    <string name="set">SET</string>
+    <string name="margin_btn">5dp</string>
+</resources>

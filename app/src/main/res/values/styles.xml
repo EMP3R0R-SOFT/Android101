@@ -1,0 +1,30 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+
+        <!--<item name="android:windowAnimationStyle">@style/WindowAnimationStyle</item>-->
+
+    </style>
+
+
+    <style name="ThemeIntro" parent="@style/Theme.AppCompat.Light">
+        <item name="android:windowBackground">@drawable/_00_intro</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+
+
+    <style name="WindowAnimationStyle">
+        <item name="android:windowEnterAnimation">@anim/activity_anim_fadein</item>
+        <item name="android:windowExitAnimation">@anim/activity_anim_fadeout</item>
+    </style>
+
+
+</resources>
