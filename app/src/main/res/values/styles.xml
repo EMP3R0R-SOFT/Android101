@@ -6,20 +6,50 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <!--شفاف شدن استاتوس بار و نویگیشن بار-->
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">true</item>
 
-        <!--<item name="android:windowAnimationStyle">@style/WindowAnimationStyle</item>-->
+
+        <!--شفاف شدن استاتوس بار و نویگیشن بار-->
+        <!--تست-->
+        <!--<item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
+        <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
+        <!--<item name="android:navigationBarColor">@android:color/transparent</item>-->
+
+        <!--فعال کردن قابلیت افکت حرکت محتوا و صفحات-->
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowActivityTransitions">true</item>
 
     </style>
 
 
-    <style name="ThemeIntro" parent="@style/Theme.AppCompat.Light">
+
+
+
+
+
+    <!--استایل-->
+    <style name="ThemeIntro" parent="android:Theme.NoTitleBar.Fullscreen">
         <item name="android:windowBackground">@drawable/_00_intro</item>
         <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
     </style>
 
 
+    <!--تم برای مقصد shared element-->
+    <style name="Theme_Transparent_Background" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+
+
+
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+
+    </style>
+    <!--تست-->
     <style name="WindowAnimationStyle">
         <item name="android:windowEnterAnimation">@anim/activity_anim_fadein</item>
         <item name="android:windowExitAnimation">@anim/activity_anim_fadeout</item>
@@ -27,13 +57,15 @@
 
 
 
-    <style name="Transparent" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:colorBackgroundCacheHint">@null</item>
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:windowTranslucentNavigation">true</item>
-    </style>
+    <!--<style name="Transparent" parent="Theme.AppCompat.Light.NoActionBar">-->
+        <!--<item name="android:windowNoTitle">true</item>-->
+        <!--<item name="android:windowBackground">@android:color/transparent</item>-->
+        <!--<item name="android:colorBackgroundCacheHint">@null</item>-->
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
+        <!--<item name="android:windowTranslucentNavigation">true</item>-->
+        <!--<item name="android:windowActivityTransitions">true</item>-->
+        <!--<item name="android:windowContentTransitions">true</item>-->
+    <!--</style>-->
 
 </resources>

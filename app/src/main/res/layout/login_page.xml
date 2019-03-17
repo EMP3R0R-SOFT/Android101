@@ -37,24 +37,26 @@
         android:layout_height="150dp"
         android:layout_marginTop="88dp"
         android:src="@drawable/logo_1"
+            android:transitionName="shitAnim"
+            app:layout_collapseMode="parallax"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:layout_width="0dp"
+            android:id="@+id/txt_logo"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:gravity="center"
-            android:text="Android 101 Tutorial"
+            android:transitionName="shitAnim2"
+            android:text="@string/android_101_tutorial"
             android:textAlignment="center"
-            android:textColor="#99FFFFFF"
-            android:textSize="20sp"
-            android:typeface="serif"
+            android:textColor="@color/btn_color_1"
+            android:textSize="24sp"
+            android:textStyle="bold"
 
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/logo_1" />
 

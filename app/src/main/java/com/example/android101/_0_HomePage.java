@@ -2,12 +2,16 @@ package com.example.android101;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.transition.Fade;
+import android.transition.Slide;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 
 import com.example.android101.nonui.SetWall;
@@ -30,14 +34,19 @@ public class _0_HomePage extends AppCompatActivity {
         //SetWall.set(this);
 
 
-                View l1 = findViewById(R.id.linearlayout1);
-                Animation anim_fade_in = AnimationUtils.loadAnimation(getBaseContext(),R.anim.fade_in_500);
-                anim_fade_in.setStartOffset(1000);
-                l1.startAnimation(anim_fade_in);
+//                View l1 = findViewById(R.id.linearlayout1);
+//                Animation anim_fade_in = AnimationUtils.loadAnimation(getBaseContext(),R.anim.fade_in_500);
+//                anim_fade_in.setStartOffset(1000);
+//                l1.startAnimation(anim_fade_in);
 
 
+        Fade fade = new Fade();
+        fade.setDuration(1000);
+        getWindow().setEnterTransition(fade);
+        getWindow().setReturnTransition(fade);
 
-
+        getWindow().getSharedElementEnterTransition().setDuration(1000);
+        getWindow().getSharedElementReturnTransition().setDuration(1000).setInterpolator(new DecelerateInterpolator());
 
 
 
@@ -105,12 +114,11 @@ public class _0_HomePage extends AppCompatActivity {
             }
         });
 
+        // ارسال ایمیل
         Button button9 = findViewById(R.id.button9);
         button9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                //setContentView(R.layout._1_sharedperferences_example);
 
                 Intent myIntent = new Intent(Intent.ACTION_SENDTO);
                 myIntent.setData(Uri.fromParts("mailto","asd@lol.ir", null));
@@ -140,7 +148,7 @@ public class _0_HomePage extends AppCompatActivity {
         button12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(getBaseContext(),_13_Shared_Element_Activity_Transition.class));
             }
         });
 

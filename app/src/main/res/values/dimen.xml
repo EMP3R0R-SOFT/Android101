@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="get_width">44dp</dimen>
-
+    <dimen name="startTest">12sp</dimen>
+    <dimen name="endTest">20sp</dimen>
 
 </resources>

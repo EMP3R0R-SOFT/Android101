@@ -3,19 +3,28 @@ package com.example.android101;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.os.Build;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.transition.ChangeBounds;
+import android.transition.ChangeImageTransform;
 import android.transition.Explode;
+import android.transition.Fade;
+import android.transition.Slide;
 import android.transition.Transition;
+import android.transition.TransitionSet;
+import android.util.Pair;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.EditText;
@@ -34,13 +43,30 @@ public class Login_Page extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         // Define Transitions:
-        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
+        //getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
         // set an exit transition
-        getWindow().setExitTransition(new Explode());
+        //getWindow().setExitTransition(new Explode());
 
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_page);
+
+
+//        Fade fade = new Fade();
+//        fade.setDuration(3000);
+//        getWindow().setEnterTransition(fade);
+//
+//        Slide slide = new Slide();
+//        slide.setDuration(1000);
+//        getWindow().setReturnTransition(slide);
+
+
+
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+//            Window window = getWindow();
+//            window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+//        }
+
 
         binding1 = DataBindingUtil.setContentView(this,R.layout.login_page);
 
@@ -71,12 +97,16 @@ public class Login_Page extends AppCompatActivity {
 //                fadeOut_Text_setProgress();
 
 
+                //startActivity(new Intent(getBaseContext(), _0_HomePage.class));
 
                 Intent intent = new Intent(getBaseContext(), _0_HomePage.class);
-                //ActivityOptions trans1 = ActivityOptions.makeSceneTransitionAnimation(this).toBundle();
-                startActivity(intent);
-                //overridePendingTransition(R.anim.fade_in_1000,R.anim.fade_out_1000);
-                overridePendingTransition(R.anim.fade_in_1000,R.anim.fade_out_1000);
+                Pair<View,String> p1 =    Pair.create(findViewById(R.id.logo_1),"shitAnim");
+                Pair<View,String> p2 =    Pair.create(findViewById(R.id.txt_logo),"shitAnim2");
+                ActivityOptions option1 = ActivityOptions.makeSceneTransitionAnimation(Login_Page.this,p1,p2); // Login_Page.this , p1,p2,p3 .....);
+                startActivity(intent,option1.toBundle());
+
+                //overridePendingTransition(0,0);
+                //overridePendingTransition(R.anim.fade_in_2000,R.anim.fade_out_2000);
             }
         });
     }
