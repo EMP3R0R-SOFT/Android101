@@ -42,11 +42,20 @@ public class _0_HomePage extends AppCompatActivity {
 
         Fade fade = new Fade();
         fade.setDuration(1000);
+        Slide slide = new Slide();
+        slide.setDuration(1000);
         getWindow().setEnterTransition(fade);
         getWindow().setReturnTransition(fade);
 
-        getWindow().getSharedElementEnterTransition().setDuration(1000);
-        getWindow().getSharedElementReturnTransition().setDuration(1000).setInterpolator(new DecelerateInterpolator());
+        getWindow().getSharedElementEnterTransition().setDuration(500);
+        getWindow().getSharedElementReturnTransition().setDuration(500).setInterpolator(new DecelerateInterpolator());
+
+        //overridePendingTransition(R.anim.slide_in_right_500,R.anim.slide_out_right_500);
+
+
+
+
+
 
 
 
@@ -103,6 +112,9 @@ public class _0_HomePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getBaseContext(), _8_Dynamic_Buttons_example.class));
+                overridePendingTransition(R.anim.slide_in_right_500,R.anim.slide_out_left_500);
+
+
             }
         });
 

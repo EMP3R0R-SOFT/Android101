@@ -17,6 +17,8 @@ public class _8_Dynamic_Buttons_example extends AppCompatActivity {
     private static final int Row_Count = 5;
     private static final int Colum_Count = 7;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,4 +72,13 @@ public class _8_Dynamic_Buttons_example extends AppCompatActivity {
 
 
     }
+
+
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left_500,R.anim.slide_out_right_500);
+    }
+
 }

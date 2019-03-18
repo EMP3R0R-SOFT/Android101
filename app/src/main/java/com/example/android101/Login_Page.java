@@ -8,23 +8,15 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
-import android.os.Build;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.transition.ChangeBounds;
-import android.transition.ChangeImageTransform;
 import android.transition.Explode;
-import android.transition.Fade;
-import android.transition.Slide;
 import android.transition.Transition;
-import android.transition.TransitionSet;
 import android.util.Pair;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.EditText;
@@ -106,7 +98,7 @@ public class Login_Page extends AppCompatActivity {
                 startActivity(intent,option1.toBundle());
 
                 //overridePendingTransition(0,0);
-                //overridePendingTransition(R.anim.fade_in_2000,R.anim.fade_out_2000);
+                //overridePendingTransition(R.anim.slide_in_right_500,R.anim.slide_out_right_500);
             }
         });
     }
