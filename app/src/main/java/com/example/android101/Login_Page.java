@@ -5,10 +5,14 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.app.ActivityOptions;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Handler;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.transition.Explode;
@@ -17,8 +21,11 @@ import android.util.Pair;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 
@@ -29,7 +36,7 @@ public class Login_Page extends AppCompatActivity {
 
 
     private LoginPageBinding binding1;
-    final int anim_duration = 500;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,9 +46,37 @@ public class Login_Page extends AppCompatActivity {
         // set an exit transition
         //getWindow().setExitTransition(new Explode());
 
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_page);
+
+        //binding1.viewLoginAnim.setVisibility(View.INVISIBLE);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                binding1.viewLoginAnim.setVisibility(View.VISIBLE);
+                android.support.constraint.ConstraintLayout l2 = findViewById(R.id.view_login_anim);
+                Animation anim2 = AnimationUtils.loadAnimation(getBaseContext(),R.anim.trans_up_fade_in_1000);
+                l2.startAnimation(anim2);
+
+            }
+        },1000);
+
+
+
+
+
+
+        getWindow().getSharedElementEnterTransition().setDuration(800);
+        getWindow().getSharedElementReturnTransition().setDuration(800).setInterpolator(new DecelerateInterpolator());
+
+
+
+
+
+
+        transparentStatus();
+        transparentNavigation();
 
 
 //        Fade fade = new Fade();
@@ -80,25 +115,16 @@ public class Login_Page extends AppCompatActivity {
 
 
     private void ClickListener() {
-        FrameLayout btn_login = findViewById(R.id.btn_login);
+        FrameLayout btn_login = findViewById(R.id.btn_Login);
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-//                animationButtonWidth();
-//                fadeOut_Text_setProgress();
+                animationButtonWidth();
+                fadeOut_Text_setProgress();
 
 
-                //startActivity(new Intent(getBaseContext(), _0_HomePage.class));
 
-                Intent intent = new Intent(getBaseContext(), _0_HomePage.class);
-                Pair<View,String> p1 =    Pair.create(findViewById(R.id.logo_1),"shitAnim");
-                Pair<View,String> p2 =    Pair.create(findViewById(R.id.txt_logo),"shitAnim2");
-                ActivityOptions option1 = ActivityOptions.makeSceneTransitionAnimation(Login_Page.this,p1,p2); // Login_Page.this , p1,p2,p3 .....);
-                startActivity(intent,option1.toBundle());
-
-                //overridePendingTransition(0,0);
-                //overridePendingTransition(R.anim.slide_in_right_500,R.anim.slide_out_right_500);
             }
         });
     }
@@ -115,16 +141,24 @@ public class Login_Page extends AppCompatActivity {
                 ViewGroup.LayoutParams layoutParams1 = binding1.btnLogin.getLayoutParams();
                 layoutParams1.width = value;
                 binding1.btnLogin.requestLayout();
+
+
+                // یه بکگراند دیگه به دکمه میدیم تا وقتی کوچیک شد گرد بشه
+                // بک گراند قبلی radius کم داره مربع میشه...
+                Drawable x = ResourcesCompat.getDrawable(getResources(), R.drawable.btn_theme_3, null);
+                binding1.btnLogin.setBackground(x);
+
             }
         });
-        anim1.setDuration(anim_duration);
+        anim1.setDuration(500);
         anim1.start();
     }
 
 
     private void fadeOut_Text_setProgress(){
 
-        binding1.btnLoginText.animate().alpha(0f).setDuration(anim_duration).setListener(new AnimatorListenerAdapter() {
+        //binding1.btnLogin.animate().
+        binding1.btnLoginText.animate().alpha(0f).setDuration(500).setListener(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationEnd(Animator animation) {
                 super.onAnimationEnd(animation);
@@ -147,12 +181,23 @@ public class Login_Page extends AppCompatActivity {
             @Override
             public void run() {
 
+                binding1.progressbar1.setVisibility(View.INVISIBLE);
 
 
+                Intent intent = new Intent(getBaseContext(), _0_HomePage.class);
+                Pair<View,String> p1 =    Pair.create(findViewById(R.id.logo_1),"shitAnim");
+
+                ActivityOptions option1 = ActivityOptions.makeSceneTransitionAnimation(Login_Page.this,p1); // Login_Page.this , p1,p2,p3 .....);
+                startActivity(intent,option1.toBundle());
+
+                //overridePendingTransition(0,0);
+                //overridePendingTransition(R.anim.slide_in_right_500,R.anim.slide_out_right_500);
 
                 //reveal_background();
+
+
             }
-        },10);
+        },2000);
 
     }
 
@@ -180,11 +225,7 @@ public class Login_Page extends AppCompatActivity {
 
                 Transition ts = new Explode();  //Slide(); //Explode();
                 ts.setDuration(3000);
-
-
-
-
-                finish();
+                //finish();
             }
         });
 
@@ -195,11 +236,71 @@ public class Login_Page extends AppCompatActivity {
 
 
 
+
     // دادن عرض دکمه
     private int getfinalwidth(){
-
         return (int) getResources().getDimension(R.dimen.get_width);
     }
 
+
+
+
+
+
+
+
+
+
+
+    // بی رنگ کردن استاتوس  بار
+    private void transparentStatus() {
+        //make full transparent statusBar
+        if (Build.VERSION.SDK_INT >= 19 && Build.VERSION.SDK_INT < 21) {
+            setWindowFlag(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, true);
+        }
+        if (Build.VERSION.SDK_INT >= 19) {
+            getWindow().getDecorView().setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+            );
+        }
+        if (Build.VERSION.SDK_INT >= 21) {
+            setWindowFlag(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, false);
+            getWindow().setStatusBarColor(Color.TRANSPARENT);
+        }
+    }
+
+    // بی رنگ کردن نویگیشن بار
+    private void transparentNavigation() {
+        //make full transparent statusBar
+        if (Build.VERSION.SDK_INT >= 19 && Build.VERSION.SDK_INT < 21) {
+            setWindowFlag( WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION, true);
+        }
+        if (Build.VERSION.SDK_INT >= 19) {
+            getWindow().getDecorView().setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+            );
+        }
+        if (Build.VERSION.SDK_INT >= 21) {
+            setWindowFlag(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS
+                    | WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION, false);
+            getWindow().setNavigationBarColor(Color.TRANSPARENT);
+        }
+    }
+
+
+
+    private void setWindowFlag(final int bits, boolean on) {
+        Window win = getWindow();
+        WindowManager.LayoutParams winParams = win.getAttributes();
+        if (on) {
+            winParams.flags |= bits;
+        } else {
+            winParams.flags &= ~bits;
+        }
+        win.setAttributes(winParams);
+    }
 
 }

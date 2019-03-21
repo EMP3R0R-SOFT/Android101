@@ -11,20 +11,27 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="._13_Shared_Element_Activity_Transition_2"
+
+        <activity android:name="._00_intro_2"
             android:theme="@style/Theme_Transparent_Background"/>
-        <activity android:name="._13_Shared_Element_Activity_Transition"
-             />
+        <activity
+
+            android:name="._13_Shared_Element_Activity_Transition_2"
+            android:theme="@style/Theme_Transparent_Background" />
+
+        <activity android:name="._13_Shared_Element_Activity_Transition" />
         <activity android:name="._12_Play_Video" />
-        <activity android:name=".Login_Page"
-            android:theme="@style/Theme_Transparent_Background"/>
+
+        <activity
+            android:name=".Login_Page"
+            android:theme="@style/Theme_Transparent_Background" />
+
         <activity
             android:name="._00_intro"
             android:screenOrientation="portrait"
             android:theme="@style/ThemeIntro">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -37,8 +44,9 @@
         <activity android:name="._4_ListView_example" />
         <activity android:name="._3_UseClass2_example" />
         <activity android:name="._2_UseClass_example" />
-        <activity android:name="._0_HomePage"
-            android:theme="@style/Theme_Transparent_Background"/>
+        <activity
+            android:name="._0_HomePage"
+            android:theme="@style/Theme_Transparent_Background" />
         <activity android:name="._1_SharedPreferences_example" />
     </application>
 

@@ -4,6 +4,8 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -26,6 +28,18 @@ public class _1_SharedPreferences_example extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout._1_sharedperferences_example);
+
+
+
+
+        View a1 = findViewById(R.id.rel1);
+        Animation anim1 = AnimationUtils.loadAnimation(this,R.anim.trans_up_fade_in_1000);
+        a1.startAnimation(anim1);
+
+
+
+
+
 
 
         SetupRadioButtonClickListener(R.id.radioBTN1);

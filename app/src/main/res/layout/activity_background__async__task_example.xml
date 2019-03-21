@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="._7_Background_Async_Task_example"
-    android:id="@+id/listlayout">
+    android:id="@+id/listlayout"
+    >
 
     <Button
         android:id="@+id/button1"
@@ -55,11 +56,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_status" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="366dp" />
 </android.support.constraint.ConstraintLayout>
