@@ -15,12 +15,44 @@ public class SetWall {
     public static void set (Context context){
 
         View l1 =  ((Activity) context).findViewById(R.id.listlayout);
-        if (getWalpaperNum(context).equals("Wallpaper 1")){
-            l1.setBackgroundResource(R.drawable.w1);
+
+        String x = getWalpaperNum(context);
+        switch (x){
+            case "Wallpaper 1" :
+                l1.setBackgroundResource(R.drawable.w1);
+                break;
+
+            case "Wallpaper 2" :
+                l1.setBackgroundResource(R.drawable.w2);
+                break;
+
+            case "Wallpaper 3" :
+                l1.setBackgroundResource(R.drawable.wall_blur_1);
+                break;
+
+            case "Wallpaper 4" :
+                l1.setBackgroundResource(R.drawable.wall_blur_3);
+                break;
+
+            case "Wallpaper 5" :
+                l1.setBackgroundResource(R.drawable.wall_4);
+                break;
+
+            case "Wallpaper 6" :
+                l1.setBackgroundResource(R.drawable.wall_5);
+                break;
+
+            case "Wallpaper 7" :
+                l1.setBackgroundResource(R.drawable.wall_6);
+                break;
         }
-        if (getWalpaperNum(context).equals("Wallpaper 2")){
-            l1.setBackgroundResource(R.drawable.w2);
-        }
+
+//        if (getWalpaperNum(context).equals("Wallpaper 1")){
+//            l1.setBackgroundResource(R.drawable.w1);
+//        }
+//        if (getWalpaperNum(context).equals("Wallpaper 2")){
+//            l1.setBackgroundResource(R.drawable.w2);
+//        }
 
     }
 

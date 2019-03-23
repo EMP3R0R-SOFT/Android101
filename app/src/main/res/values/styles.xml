@@ -6,7 +6,9 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
+
+        <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
+
         <!--تنظیم انیمیشن اکتیویتی ها در کل برنامه-->
         <!--در پایین اومده-->
         <!--<item name="android:windowAnimationStyle">@style/App_Activity_Anim</item>-->
@@ -18,11 +20,8 @@
         <!--نمیدونم-->
         <!--<item name="android:windowIsTranslucent">true</item>-->
 
-        <!--شفاف شدن استاتوس بار و نویگیشن بار-->
-        <!--تست-->
-        <!--<item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
-        <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
-        <!--<item name="android:navigationBarColor">@android:color/transparent</item>-->
+        <!--بکگراند پیشفرض کل برنامه-->
+        <item name="android:windowBackground">@drawable/wall_blur_3</item>
 
         <!--فعال کردن قابلیت افکت حرکت محتوا و صفحات-->
         <item name="android:windowContentTransitions">true</item>
@@ -31,19 +30,18 @@
     </style>
 
 
-
     <!--تنظیم انیمیشن اکتیویتی ها در کل برنامه-->
     <!--<style name="App_Activity_Anim" parent="@android:style/Animation.Activity">-->
-        <!--<item name="android:windowEnterAnimation">@anim/slide_in_right_500</item>-->
-        <!--<item name="android:windowExitAnimation">@anim/slide_out_left_500</item>-->
-        <!--<item name="android:activityCloseEnterAnimation">@anim/slide_in_left_500</item>-->
-        <!--<item name="android:activityCloseExitAnimation">@anim/slide_out_right_500</item>-->
+    <!--<item name="android:windowEnterAnimation">@anim/slide_in_right_500</item>-->
+    <!--<item name="android:windowExitAnimation">@anim/slide_out_left_500</item>-->
+    <!--<item name="android:activityCloseEnterAnimation">@anim/slide_in_left_500</item>-->
+    <!--<item name="android:activityCloseExitAnimation">@anim/slide_out_right_500</item>-->
 
     <!--</style>-->
 
 
     <!--استایل اسپلش-->
-    <style name="ThemeIntro" parent="android:Theme.NoTitleBar.Fullscreen">
+    <style name="ThemeIntro" parent="@style/Theme.AppCompat.Light.NoActionBar">
 
         <item name="android:windowBackground">@drawable/_00_intro</item>
         <item name="android:windowFullscreen">true</item>
@@ -66,34 +64,57 @@
 
 
     <!--مقدار دهی به دکمه های هوم اسکرین-->
-    <style name="btn_homepage_style">
-        <item name="android:layout_width">150dp</item>
-        <item name="android:layout_height">100dp</item>
-        <item name="android:layout_margin">5dp</item>
+    <style name="homepage_style_btn">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">70dp</item>
         <item name="android:background">@drawable/btn_theme_1</item>
-        <item name="android:textAlignment">center</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:layout_marginBottom">1dp</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:textColor">@color/btn_color_1</item>
         <item name="android:textSize">14sp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
 
+
+    <!--مقدار دهی تکس صفحه homescreen-->
+    <style name="homepage_style_texts">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:layout_gravity">center</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginBottom">3dp</item>
+
+        <item name="android:textColor">@color/btn_color_1</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">3</item>
+        <item name="android:shadowColor">#66000000</item>
+        <item name="android:shadowRadius">6</item>
+        <item name="android:background">@drawable/btn_theme_4</item>
     </style>
 
 
     <!--<style name="Transparent" parent="Theme.AppCompat.Light.NoActionBar">-->
 
-        <!--<item name="android:windowNoTitle">true</item>-->
-        <!--<item name="android:windowBackground">@android:color/transparent</item>-->
-        <!--<item name="android:colorBackgroundCacheHint">@null</item>-->
-        <!--<item name="android:windowIsTranslucent">true</item>-->
-        <!--<item name="android:windowTranslucentStatus">true</item>-->
-        <!--<item name="android:windowTranslucentNavigation">true</item>-->
-        <!--<item name="android:windowActivityTransitions">true</item>-->
-        <!--<item name="android:windowContentTransitions">true</item>-->
+    <!--<item name="android:windowNoTitle">true</item>-->
+    <!--<item name="android:windowBackground">@android:color/transparent</item>-->
+    <!--<item name="android:colorBackgroundCacheHint">@null</item>-->
+    <!--<item name="android:windowIsTranslucent">true</item>-->
+    <!--<item name="android:windowTranslucentStatus">true</item>-->
+    <!--<item name="android:windowTranslucentNavigation">true</item>-->
+    <!--<item name="android:windowActivityTransitions">true</item>-->
+    <!--<item name="android:windowContentTransitions">true</item>-->
 
     <!--</style>-->
-
-
-
 
 
 </resources>

@@ -2,22 +2,26 @@ package com.example.android101;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.PorterDuff;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Build;
-import android.os.Handler;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.transition.Fade;
 import android.transition.Slide;
-import android.view.MotionEvent;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.android101.nonui.SetWall;
 
@@ -26,7 +30,7 @@ public class _0_HomePage extends AppCompatActivity {
     @Override
     protected void onResume() {
 
-        //SetWall.set(this);
+        SetWall.set(this);
         super.onResume();
     }
 
@@ -35,17 +39,11 @@ public class _0_HomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout._0_activity_home_page);
 
+        SetWall.set(this);
+
         transparentStatus();
         transparentNavigation();
         getWindow().setNavigationBarColor(Color.parseColor("#4D000000"));
-        //SetWall.set(this);
-
-
-//                View l1 = findViewById(R.id.linearlayout1);
-//                Animation anim_fade_in = AnimationUtils.loadAnimation(getBaseContext(),R.anim.fade_in_500);
-//                anim_fade_in.setStartOffset(1000);
-//                l1.startAnimation(anim_fade_in);
-
 
         Fade fade = new Fade();
         fade.setDuration(1000);
@@ -57,13 +55,13 @@ public class _0_HomePage extends AppCompatActivity {
         getWindow().getSharedElementEnterTransition().setDuration(800);
         getWindow().getSharedElementReturnTransition().setDuration(800).setInterpolator(new DecelerateInterpolator());
 
-        //overridePendingTransition(R.anim.slide_in_right_500,R.anim.slide_out_right_500);
 
 
+        View p1 = findViewById(R.id.scrollView1);
+        setTypeFace_findViews(p1);
 
 
-
-
+        Setup_buttomNav();
 
 
         final Button button1= findViewById(R.id.button1);
@@ -173,17 +171,58 @@ public class _0_HomePage extends AppCompatActivity {
         });
 
 
+        final Button button13 = findViewById(R.id.button13);
+        button13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getBaseContext(),_Login_Page_Splash.class));
+            }
+        });
+
+
     }
 
 
 
 
+    private void Setup_buttomNav() {
+        final LinearLayout navdraw1= findViewById(R.id.navdraw1);
+        final RelativeLayout homepage_screen = findViewById(R.id.homepage_screen);
+        BottomNavigationView BottomNav1 = findViewById(R.id.BottomNav1);
 
 
+        final float transX = homepage_screen.getTranslationX();
+        //final int anim_duration_1 = 500;
 
+        BottomNav1.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
+                switch (menuItem.getItemId()){
 
+                    case R.id.menu_developer:
 
+                        homepage_screen.animate().translationX(0);
+                        navdraw1.animate().translationX(0);
+
+                        break;
+
+                    case R.id.menu_home:
+
+                        homepage_screen.animate().translationX(transX);
+                        navdraw1.animate().translationX(transX);
+
+                        break;
+
+                    case R.id.menu_todo:
+
+                        Toast.makeText(_0_HomePage.this, "Notifi Clicked!", Toast.LENGTH_SHORT).show();
+                        break;
+
+                } return true;
+            }
+        });
+    }
 
 
 
@@ -241,7 +280,24 @@ public class _0_HomePage extends AppCompatActivity {
 
 
 
-
+    // انتخاب تمام textView با دادن parent
+    public void setTypeFace_findViews(View v ) {
+        try {
+            if (v instanceof ViewGroup) {
+                ViewGroup vg = (ViewGroup) v;
+                for (int i = 0; i < vg.getChildCount(); i++) {
+                    View child = vg.getChildAt(i);
+                    // recursively call this method
+                    setTypeFace_findViews(child);
+                }
+            } else if (v instanceof TextView) {
+                //do whatever you want ...
+                ((TextView) v).setTypeface(Typeface.createFromAsset(getResources().getAssets(),"fonts/yekan.ttf"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 
 

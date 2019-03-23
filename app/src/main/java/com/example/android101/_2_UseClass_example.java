@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.android101.nonui.Calculation_Class;
+import com.example.android101.nonui.SetWall;
 
 import java.util.Locale;
 
@@ -19,12 +20,12 @@ public class _2_UseClass_example extends AppCompatActivity {
     // از کلاسی که ساختیم استفاده میکنیم
     private Calculation_Class callclass;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_use_class_example);
+
+        SetWall.set(this);
 
         // یه اینستنس از کلاسی که ساختیم تعریف میکنیم
         callclass = Calculation_Class.getInstance();

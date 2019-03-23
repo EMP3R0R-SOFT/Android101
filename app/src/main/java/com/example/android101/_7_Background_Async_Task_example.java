@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.android101.nonui.SetWall;
+
 import java.util.Random;
 
 public class _7_Background_Async_Task_example extends AppCompatActivity {
@@ -16,6 +18,9 @@ public class _7_Background_Async_Task_example extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_background__async__task_example);
+
+        SetWall.set(this);
+
     }
 
 

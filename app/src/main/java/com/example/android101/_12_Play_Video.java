@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
+import com.example.android101.nonui.SetWall;
+
 public class _12_Play_Video extends AppCompatActivity {
 
     @Override
@@ -15,6 +17,7 @@ public class _12_Play_Video extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout._12__play__video);
 
+        SetWall.set(this);
 
 /*
 

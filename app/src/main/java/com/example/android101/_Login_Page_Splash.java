@@ -5,25 +5,25 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Handler;
-import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Pair;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 
 
-public class _00_intro_2 extends AppCompatActivity {
+public class _Login_Page_Splash extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity__00_intro_2);
 
+        // کلاس شفاف سازی استاتوس و ناو
         transparentStatus();
         transparentNavigation();
+
 
 
         new Handler().postDelayed(new Runnable() {
@@ -33,11 +33,12 @@ public class _00_intro_2 extends AppCompatActivity {
                 Intent intent = new Intent(getBaseContext(), Login_Page.class);
                 Pair<View,String> p1 =    Pair.create(findViewById(R.id.logo_intro_2),"anim_splash");
                 ActivityOptions option1 = ActivityOptions
-                        .makeSceneTransitionAnimation(_00_intro_2.this,p1);
+                        .makeSceneTransitionAnimation(_Login_Page_Splash.this,p1);
                 startActivity(intent,option1.toBundle());
 
             }
-        },1000);
+        },2000);
+
 
 
 

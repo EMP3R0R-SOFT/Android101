@@ -8,12 +8,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.android101.nonui.SetWall;
+
 public class _10_Pass_data_using_intent_2_example extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pass_data_using_intent_2_example);
+
+        SetWall.set(this);
+
 
         Intent get1 = getIntent();
         final int recived_int = get1.getIntExtra("key1",0);

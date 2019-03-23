@@ -28,6 +28,9 @@ public class _4_ListView_example extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view_example);
 
+        SetWall.set(this);
+
+
         ijadeList();       //////
         clickListener();
     }
@@ -120,7 +123,7 @@ public class _4_ListView_example extends AppCompatActivity {
 
                 if (position == 0){
 
-                    SetWall.set(getBaseContext());
+                    Toast.makeText(_4_ListView_example.this, "wallpaper", Toast.LENGTH_SHORT).show();
 
                 }
                 if (position == 1){

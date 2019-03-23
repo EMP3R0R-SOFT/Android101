@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.android101.nonui.SetWall;
+
 public class _9_Pass_data_using_intent_1_example extends AppCompatActivity {
 
 
@@ -16,6 +18,8 @@ public class _9_Pass_data_using_intent_1_example extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pass_data_using_intent_1_example);
+
+        SetWall.set(this);
 
 
         Button btnSend = findViewById(R.id.btnSend);

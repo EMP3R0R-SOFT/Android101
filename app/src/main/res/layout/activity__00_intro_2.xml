@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android101._00_intro_2"
+    tools:context="com.example.android101._Login_Page_Splash"
     android:background="#262626"
     android:fitsSystemWindows="false"
     android:windowTranslucentNavigation="false"

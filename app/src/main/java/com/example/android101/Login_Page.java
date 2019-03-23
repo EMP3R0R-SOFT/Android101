@@ -5,13 +5,13 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.app.ActivityOptions;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Handler;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -37,6 +37,11 @@ public class Login_Page extends AppCompatActivity {
 
     private LoginPageBinding binding1;
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,11 +61,11 @@ public class Login_Page extends AppCompatActivity {
             public void run() {
                 binding1.viewLoginAnim.setVisibility(View.VISIBLE);
                 android.support.constraint.ConstraintLayout l2 = findViewById(R.id.view_login_anim);
-                Animation anim2 = AnimationUtils.loadAnimation(getBaseContext(),R.anim.trans_up_fade_in_1000);
+                Animation anim2 = AnimationUtils.loadAnimation(getBaseContext(),R.anim.trans_up_fade_in_2000);
                 l2.startAnimation(anim2);
 
             }
-        },1000);
+        },700);
 
 
 
@@ -150,7 +155,7 @@ public class Login_Page extends AppCompatActivity {
 
             }
         });
-        anim1.setDuration(500);
+        anim1.setDuration(300);
         anim1.start();
     }
 

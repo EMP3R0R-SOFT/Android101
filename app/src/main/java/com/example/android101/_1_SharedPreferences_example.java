@@ -4,23 +4,17 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.android101.nonui.SetWall;
+
 import static com.example.android101.nonui.SetWall.getWalpaperNum;
 
 public class _1_SharedPreferences_example extends AppCompatActivity {
-
-
-
-
-
-
 
 
 
@@ -30,20 +24,17 @@ public class _1_SharedPreferences_example extends AppCompatActivity {
         setContentView(R.layout._1_sharedperferences_example);
 
 
-
-
-        View a1 = findViewById(R.id.rel1);
-        Animation anim1 = AnimationUtils.loadAnimation(this,R.anim.trans_up_fade_in_1000);
-        a1.startAnimation(anim1);
+        SetWall.set(this);
 
 
 
-
-
-
-
-        SetupRadioButtonClickListener(R.id.radioBTN1);
-        SetupRadioButtonClickListener(R.id.radioBTN2);
+        Setup_RadioButton_ClickListener(R.id.radioBTN1);
+        Setup_RadioButton_ClickListener(R.id.radioBTN2);
+        Setup_RadioButton_ClickListener(R.id.radioBTN3);
+        Setup_RadioButton_ClickListener(R.id.radioBTN4);
+        Setup_RadioButton_ClickListener(R.id.radioBTN5);
+        Setup_RadioButton_ClickListener(R.id.radioBTN6);
+        Setup_RadioButton_ClickListener(R.id.radioBTN7);
 
 
         // Dokme 1
@@ -141,22 +132,7 @@ public class _1_SharedPreferences_example extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    private void SetupRadioButtonClickListener (int btnID){
+    private void Setup_RadioButton_ClickListener(int btnID){
 
         final RadioButton RadioBTN = findViewById(btnID);
         if (getWalpaperNum(this).equals(RadioBTN.getText())  ){

@@ -4,19 +4,28 @@
     >
 
     <item
+        android:id="@+id/menu_developer"
+        android:enabled="true"
+        android:icon="@drawable/ic_account_box_black_24dp"
+        android:title="Dashboard"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
         android:id="@+id/menu_home"
         android:enabled="true"
-        android:icon="@android:drawable/ic_menu_today"
-        android:title="HomePage"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="Functions"
          app:showAsAction="ifRoom"
         />
 
     <item
-        android:id="@+id/menu_developer"
+        android:id="@+id/menu_todo"
         android:enabled="true"
-        android:icon="@android:drawable/ic_menu_today"
-        android:title="HomePage"
+        android:icon="@drawable/ic_check_circle_black_24dp"
+        android:title="ToDo"
         app:showAsAction="ifRoom"
         />
+
 
 </menu>

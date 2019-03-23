@@ -7,4 +7,8 @@
     <string name="margin_btn">5dp</string>
     <string name="shared_element_text_1">Smile Pretty for the Devil :)</string>
     <string name="android_101">Android 101</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

@@ -9,6 +9,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.android101.nonui.SetWall;
 import com.example.android101.nonui.T;
 
 
@@ -20,6 +21,8 @@ public class _11_Simple_ListView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout._11__simple__list_view);
+
+        SetWall.set(this);
 
 
         makelist();
