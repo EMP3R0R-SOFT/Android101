@@ -1,12 +1,7 @@
 package com.example.android101;
 
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.MediaController;
-import android.widget.VideoView;
 
 import com.example.android101.nonui.SetWall;
 

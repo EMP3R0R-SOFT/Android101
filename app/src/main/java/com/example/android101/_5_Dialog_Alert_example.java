@@ -17,8 +17,7 @@ public class _5_Dialog_Alert_example extends AppCompatActivity {
 
         SetWall.set(this);
 
-        SetupAlertDialog();
-
+        SetupAlertDialog_UsingFragment();
 
 
 
@@ -26,10 +25,10 @@ public class _5_Dialog_Alert_example extends AppCompatActivity {
 
     }
 
-    private void SetupAlertDialog(){
 
-        Button button = findViewById(R.id.button6);
-        button.setOnClickListener(new View.OnClickListener() {
+    private void SetupAlertDialog_UsingFragment(){
+        Button button1 = findViewById(R.id.button1);
+        button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -40,7 +39,8 @@ public class _5_Dialog_Alert_example extends AppCompatActivity {
 
             }
         });
-
-
     }
+
+
+
 }

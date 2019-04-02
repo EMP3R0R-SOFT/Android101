@@ -12,18 +12,18 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name="._Login_Page_Splash"
+            android:name="com.example.android101._Login_Page_Splash"
             android:theme="@style/Theme_Transparent_Background" />
         <activity
-            android:name="._13_Shared_Element_Activity_Transition_2"
+            android:name="com.example.android101._13_Shared_Element_Activity_Transition_2"
             android:theme="@style/Theme_Transparent_Background" />
-        <activity android:name="._13_Shared_Element_Activity_Transition" />
-        <activity android:name="._12_Play_Video" />
+        <activity android:name="com.example.android101._13_Shared_Element_Activity_Transition" />
+        <activity android:name="com.example.android101._12_Play_Video" />
         <activity
-            android:name=".Login_Page"
+            android:name="com.example.android101.Login_Page"
             android:theme="@style/Theme_Transparent_Background" />
         <activity
-            android:name="._00_intro"
+            android:name="com.example.android101._00_intro"
             android:screenOrientation="portrait"
             android:theme="@style/ThemeIntro">
             <intent-filter>
@@ -32,19 +32,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="._11_Simple_ListView" />
-        <activity android:name="._10_Pass_data_using_intent_2_example" />
-        <activity android:name="._9_Pass_data_using_intent_1_example" />
-        <activity android:name="._8_Dynamic_Buttons_example" />
-        <activity android:name="._7_Background_Async_Task_example" />
-        <activity android:name="._5_Dialog_Alert_example" />
-        <activity android:name="._4_ListView_example" />
-        <activity android:name="._3_UseClass2_example" />
-        <activity android:name="._2_UseClass_example" />
+        <activity android:name="com.example.android101._11_Simple_ListView" />
+        <activity android:name="com.example.android101._10_Pass_data_using_intent_2_example" />
+        <activity android:name="com.example.android101._9_Pass_data_using_intent_1_example" />
+        <activity android:name="com.example.android101._8_Dynamic_Buttons_example" />
+        <activity android:name="com.example.android101._7_Background_Async_Task_example" />
+        <activity android:name="com.example.android101._5_Dialog_Alert_example" />
+        <activity android:name="com.example.android101._4_ListView_example" />
+        <activity android:name="com.example.android101._3_UseClass2_example" />
+        <activity android:name="com.example.android101._2_UseClass_example" />
         <activity
-            android:name="._0_HomePage"
+            android:name="com.example.android101._0_HomePage"
             android:theme="@style/Theme_Transparent_Background" />
-        <activity android:name="._1_SharedPreferences_example" />
+        <activity android:name="com.example.android101._1_SharedPreferences_example" />
     </application>
 
 </manifest>

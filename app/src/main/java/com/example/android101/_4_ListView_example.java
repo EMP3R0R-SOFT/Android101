@@ -1,5 +1,6 @@
 package com.example.android101;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -128,7 +129,12 @@ public class _4_ListView_example extends AppCompatActivity {
                 }
                 if (position == 1){
                     Toast.makeText(_4_ListView_example.this, "exit", Toast.LENGTH_SHORT).show();
-                    finish();
+
+                    Intent homeIntent = new Intent(Intent.ACTION_MAIN);
+                    homeIntent.addCategory( Intent.CATEGORY_HOME );
+                    homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(homeIntent);
+                    //finish();
 
                 }
             }
