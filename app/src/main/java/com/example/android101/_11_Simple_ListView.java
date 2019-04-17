@@ -24,9 +24,8 @@ public class _11_Simple_ListView extends AppCompatActivity {
 
         SetWall.set(this);
 
-
         makelist();
-        T.show(this , "fuck you!");
+
     }
 
     private void makelist() {

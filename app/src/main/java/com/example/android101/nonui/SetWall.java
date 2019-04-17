@@ -47,18 +47,12 @@ public class SetWall {
                 break;
         }
 
-//        if (getWalpaperNum(context).equals("Wallpaper 1")){
-//            l1.setBackgroundResource(R.drawable.w1);
-//        }
-//        if (getWalpaperNum(context).equals("Wallpaper 2")){
-//            l1.setBackgroundResource(R.drawable.w2);
-//        }
 
     }
 
     public static String getWalpaperNum(Context context){
 
         SharedPreferences radio_pref = context.getSharedPreferences("datastore1",MODE_PRIVATE);
-        return radio_pref.getString("wallpaperNum","Wallpaper 1");
+        return radio_pref.getString("wallpaperNum","Wallpaper 5");
     }
 }

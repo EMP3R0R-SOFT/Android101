@@ -15,7 +15,7 @@ public class _13_Shared_Element_Activity_Transition extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity__13__shared__element___transition);
+        setContentView(R.layout._13_shared_element__transition);
 
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

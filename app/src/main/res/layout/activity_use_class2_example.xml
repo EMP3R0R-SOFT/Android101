@@ -22,7 +22,7 @@
             android:layout_below="@id/inputdata"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="-- Calculate 2 --" />
+            android:text="Calculate 2" />
 
 
     </RelativeLayout>

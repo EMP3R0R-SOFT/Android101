@@ -13,7 +13,7 @@ public class _13_Shared_Element_Activity_Transition_2 extends AppCompatActivity 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity__13__shared__element___transition_2);
+        setContentView(R.layout._13_shared_element_transition_2);
 
 
         // تغیر سرعت افکت shared element

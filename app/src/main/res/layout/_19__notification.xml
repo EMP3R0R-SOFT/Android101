@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="._19_Notification"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    >
+
+    <EditText
+        android:layout_marginTop="20dp"
+        android:id="@+id/edit_text_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/btn_color_1"
+        android:gravity="center"
+        android:text="Android 101"
+        android:hint="Title"/>
+
+    <EditText
+
+        android:id="@+id/edit_text_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/btn_color_1"
+        android:text="Hi :)"
+        android:hint="Message"/>
+
+
+    <Button
+        android:id="@+id/button_notifi_1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="40dp"
+
+        android:onClick="Show_Simple_Notifi_1"
+        android:background="@drawable/btn_theme_1"
+        android:textColor="@color/btn_color_1"
+        android:text="Simple Notification 1"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/button_notifi_2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="4dp"
+
+        android:onClick="Show_Simple_Notifi_2"
+        android:background="@drawable/btn_theme_1"
+        android:textColor="@color/btn_color_1"
+        android:text="Simple Notification 2"
+        android:textAllCaps="false" />
+
+    <Button
+    android:id="@+id/button_notifi_with_btn_1"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_marginTop="4dp"
+
+    android:onClick="Show_Notifi_Clickable"
+    android:background="@drawable/btn_theme_1"
+    android:textColor="@color/btn_color_1"
+    android:text="+ Clickable"
+    android:textAllCaps="false" />
+</LinearLayout>

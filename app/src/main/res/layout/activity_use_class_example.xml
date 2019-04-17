@@ -15,21 +15,18 @@
         android:id="@+id/inputdata"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
         android:ems="10"
-        android:inputType="text"
-        android:layout_marginTop="30dp"
-        />
+        android:inputType="text" />
 
     <Button
         android:id="@+id/btn_calculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calculate"
-        android:layout_below="@id/inputdata"
+        android:layout_below="@+id/inputdata"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        />
+        android:layout_marginTop="20dp"
+        android:text="Calculate" />
 
 
 </RelativeLayout>

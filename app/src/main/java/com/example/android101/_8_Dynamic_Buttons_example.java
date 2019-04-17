@@ -15,7 +15,7 @@ import com.example.android101.nonui.SetWall;
 public class _8_Dynamic_Buttons_example extends AppCompatActivity {
 
     private static final int Row_Count = 5;
-    private static final int Colum_Count = 7;
+    private static final int Colum_Count = 4;
 
 
 

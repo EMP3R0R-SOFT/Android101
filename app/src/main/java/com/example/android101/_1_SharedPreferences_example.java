@@ -1,5 +1,6 @@
 package com.example.android101;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,15 +18,17 @@ import static com.example.android101.nonui.SetWall.getWalpaperNum;
 public class _1_SharedPreferences_example extends AppCompatActivity {
 
 
+    Context c1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout._1_sharedperferences_example);
+        setContentView(R.layout._01_sharedperferences_example);
 
 
         SetWall.set(this);
 
+        c1=this;
 
 
         Setup_RadioButton_ClickListener(R.id.radioBTN1);
@@ -37,7 +40,7 @@ public class _1_SharedPreferences_example extends AppCompatActivity {
         Setup_RadioButton_ClickListener(R.id.radioBTN7);
 
 
-        // Dokme 1
+        // Dokme 1 (save)
         Button button1  = findViewById(R.id.button1);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,7 +63,7 @@ public class _1_SharedPreferences_example extends AppCompatActivity {
         });
 
 
-        // Dokme 2
+        // Dokme 2 (Read)
         Button button2  = findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,8 +105,6 @@ public class _1_SharedPreferences_example extends AppCompatActivity {
 
 
                 android.content.SharedPreferences data1 = getSharedPreferences("datastore1",MODE_PRIVATE);
-               // data1.edit().remove("Username").apply();
-
                 data1.edit().clear().apply();
 
             }
@@ -135,6 +136,7 @@ public class _1_SharedPreferences_example extends AppCompatActivity {
     private void Setup_RadioButton_ClickListener(int btnID){
 
         final RadioButton RadioBTN = findViewById(btnID);
+
         if (getWalpaperNum(this).equals(RadioBTN.getText())  ){
             RadioBTN.setChecked(true);
         }
@@ -143,7 +145,7 @@ public class _1_SharedPreferences_example extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Save_RadioButton_Pref(RadioBTN.getText().toString());
-                //T(RadioBTN.getText() + "");
+                SetWall.set(c1);
             }
         });
     }

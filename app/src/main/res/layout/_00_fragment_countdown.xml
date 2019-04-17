@@ -1,0 +1,240 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android101.fragments.Countdown">
+
+    <RelativeLayout
+        android:id="@+id/navdraw1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/theme_dark_1"
+
+        android:layout_marginBottom="160dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        >
+
+        <TextView
+            android:id="@+id/countdown_page_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+
+            android:paddingBottom="10dp"
+
+            android:shadowColor="@color/shadow_color_1"
+            android:shadowDx="0.0"
+            android:shadowDy="20.0"
+            android:shadowRadius="16"
+            android:text="@string/aim_for_the_moon"
+            android:textColor="@color/btn_color_1"
+            android:typeface="serif"
+            android:textSize="12sp" />
+
+
+        <ImageView
+            android:id="@+id/countdown_page_1"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/me_1"
+
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/countdown_page_0"
+
+            android:layout_marginTop="40dp"
+            />
+
+        <TextView
+            android:id="@+id/countdown_page_2"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+
+            android:layout_below="@+id/countdown_page_1"
+
+
+            android:text="Abraham Chanani"
+            android:textColor="@color/btn_color_1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+
+            android:shadowColor="@color/shadow_color_1"
+            android:shadowDx="0.0"
+            android:shadowDy="20.0"
+            android:shadowRadius="16"/>
+
+        <TextView
+            android:id="@+id/countdown_page_3"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/countdown_page_2"
+            android:layout_marginTop="-5dp"
+
+            android:text="Abraham.chanani@Live.com"
+            android:textColor="@color/btn_color_1"
+            android:textSize="14sp"
+            android:textStyle="bold"
+
+            android:shadowColor="@color/shadow_color_1"
+            android:shadowDx="0.0"
+            android:shadowDy="20.0"
+            android:shadowRadius="16"
+            />
+
+
+
+
+        <TextView
+            android:id="@+id/countdown_page_4"
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:padding="5dp"
+
+            android:layout_above="@id/countdown_page_5"
+
+
+            android:shadowColor="@color/shadow_color_1"
+            android:shadowDx="0.0"
+            android:shadowDy="20.0"
+            android:shadowRadius="16"
+
+            android:layout_marginBottom="80dp"
+
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+
+
+            android:text="Software Developer"
+            android:textColor="@color/btn_color_1"
+            android:textSize="32sp"
+            />
+
+        <TextView
+            android:id="@+id/countdown_page_5"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_horizontal"
+
+            android:layout_alignParentBottom="true"
+
+            android:shadowColor="@color/shadow_color_1"
+            android:shadowDx="0.0"
+            android:shadowDy="20.0"
+            android:shadowRadius="16"
+
+            android:text="is coming soon..."
+            android:textColor="@color/btn_color_1"
+            android:textSize="16sp" />
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txt_day"
+                style="@style/countdown_text_value"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/title_day"
+                style="@style/countdown_text_title"
+                android:text="Days" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_hour"
+                style="@style/countdown_text_value"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/title_hour"
+                style="@style/countdown_text_title"
+                android:text="Hours" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_minutes"
+                style="@style/countdown_text_value"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/title_minutes"
+                style="@style/countdown_text_title"
+                android:text="Minutes" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_seconds"
+                style="@style/countdown_text_value"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/title_seconds"
+                style="@style/countdown_text_title"
+                android:text="Seconds" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

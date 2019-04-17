@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/listlayout"
-    tools:context="._11_Simple_ListView">
+    tools:context="._11_Simple_ListView"
+    android:fitsSystemWindows="true">
 
     <ListView
         android:id="@+id/listXXX"

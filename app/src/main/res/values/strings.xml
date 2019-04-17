@@ -14,4 +14,6 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="aim_for_the_moon"><u>aim for the moon. \nif you miss,\nyou may  hit a star.</u></string>
+    <string name="test_text">This is a test text For fill the Textviews. This is a test text For fill the Textviews. This is a test text For fill the Textviews. This is a test text For fill the Textviews.</string>
 </resources>

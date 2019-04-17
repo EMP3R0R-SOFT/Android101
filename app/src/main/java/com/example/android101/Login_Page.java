@@ -188,7 +188,7 @@ public class Login_Page extends AppCompatActivity {
                 binding1.progressbar1.setVisibility(View.INVISIBLE);
 
 
-                Intent intent = new Intent(getBaseContext(), _0_HomePage.class);
+                Intent intent = new Intent(getBaseContext(), _0_HomePage_Theme.class);
                 Pair<View,String> p1 =    Pair.create(findViewById(R.id.logo_1),"shitAnim");
 
                 ActivityOptions option1 = ActivityOptions.makeSceneTransitionAnimation(Login_Page.this,p1); // Login_Page.this , p1,p2,p3 .....);

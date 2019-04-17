@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/listlayout"
     tools:context="com.example.android101._12_Play_Video"
     android:background="#006064">
 
