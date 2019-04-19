@@ -22,7 +22,7 @@ public class _11_Simple_ListView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout._11__simple__list_view);
 
-        SetWall.set(this);
+
 
         makelist();
 

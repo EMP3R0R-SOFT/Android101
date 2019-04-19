@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.android101.nonui.SetWall;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.util.Calendar;
@@ -19,6 +21,8 @@ public class _14_Miladi_be_Shamsi extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout._14__miladi_be__shamsi);
+        SetWall.set(this);
+
 
         set_current_time();
 

@@ -1,35 +1,14 @@
 package com.example.android101.fragments;
 
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ScrollView;
-import android.widget.Toast;
 
 import com.example.android101.R;
-import com.example.android101._11_Simple_ListView;
-import com.example.android101._12_Play_Video;
-import com.example.android101._13_Shared_Element_Activity_Transition;
-import com.example.android101._14_Miladi_be_Shamsi;
-import com.example.android101._15_JobScheduler;
-import com.example.android101._17_JSON_VolleyLibrary;
-import com.example.android101._18_toDo_json;
-import com.example.android101._1_SharedPreferences_example;
-import com.example.android101._2_UseClass_example;
-import com.example.android101._3_UseClass2_example;
-import com.example.android101._4_ListView_example;
-import com.example.android101._5_Dialog_Alert_example;
-import com.example.android101._7_Background_Async_Task_example;
-import com.example.android101._8_Dynamic_Buttons_example;
-import com.example.android101._9_Pass_data_using_intent_1_example;
-import com.example.android101._Login_Page_Splash;
 
 public class functions extends Fragment {
 
@@ -51,11 +30,6 @@ public class functions extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-
-        // scroll scrollview to certain point
-        final ScrollView mScrollView = getActivity().findViewById(R.id.scrollView1);
-        final Button btnForScroll = getActivity().findViewById(R.id.button19);
-        //mScrollView.scrollTo(0, btnForScroll.getBottom());
 
 
 //        final Button button1 = getActivity().findViewById(R.id.button1);

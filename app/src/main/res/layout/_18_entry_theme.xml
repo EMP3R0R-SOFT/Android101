@@ -1,99 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/todo_entry"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="4dp"
-    android:orientation="vertical"
     android:background="@drawable/theme_dark_1"
-    android:id="@+id/todo_entry"
-    >
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/todo_touch_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
 
-
-
-        <LinearLayout
+        <TextView
+            android:id="@+id/txt_todo_title"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
 
-            <TextView
-                android:id="@+id/txt_todo_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="20dp"
-                android:layout_weight="1"
-                android:text="#193"
+            android:gravity="center"
 
+            android:text="toDo Title"
+            android:textColor="@color/light_gray"
+            android:textSize="22sp"
+            android:textStyle="bold"
 
-                android:textColor="@color/light_gray"
-                android:textSize="22sp"
-                android:textStyle="bold"
+            />
 
-                />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="5dp">
-
-
-            <Button
-                android:id="@+id/btn_todo_complete"
-                android:layout_width="70dp"
-                android:layout_height="50dp"
-
-                android:background="@drawable/theme_dark_1_transparent"
-                android:text="Complete"
-                android:textAlignment="center"
-                android:textColor="@color/btn_color_1"
-                android:textSize="10sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/btn_todo_edit"
-                android:layout_width="70dp"
-                android:layout_height="50dp"
-
-                android:layout_marginLeft="3dp"
-
-                android:background="@drawable/theme_dark_1_transparent"
-                android:text="Edit"
-                android:textAlignment="center"
-                android:textColor="@color/btn_color_1"
-                android:textSize="10sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/btn_todo_delete"
-                android:layout_width="70dp"
-                android:layout_height="50dp"
-
-                android:layout_marginLeft="3dp"
-
-                android:background="@drawable/theme_dark_1_transparent"
-                android:text="Delete"
-                android:textAlignment="center"
-                android:textColor="@color/btn_color_1"
-                android:textSize="10sp"
-                android:textStyle="bold" />
-            </LinearLayout>
-
-        </LinearLayout>
-
+        <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:layout_marginTop="15dp"-->
+        <!--android:background="#99B9B9B9" />-->
 
         <TextView
             android:id="@+id/txt_todo_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_margin="20dp"
 
-            android:text="@string/test_text"
+            android:text="@string/test_text_big"
             android:textColor="@color/light_gray" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#99B9B9B9" />
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+
+        android:layout_marginBottom="1dp"
+        android:orientation="horizontal"
+        android:weightSum="5"
+
+        >
+
+        <Button
+            android:id="@+id/btn_todo_go_down"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:background="@drawable/btn_todo_buttom_left"
+            android:text="Go Down"
+            android:textAlignment="center"
+            android:textColor="@color/btn_color_1"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/btn_todo_complete_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_todo_button"
+            android:gravity="center">
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/btn_todo_complete"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+
+
+                android:textColor="@color/btn_color_1"
+                android:buttonTint="@color/btn_color_1"
+                android:text="DONE"
+                android:textSize="10sp"
+                android:textStyle="bold"
+
+                />
+        </LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/btn_todo_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:background="@drawable/btn_todo_button"
+            android:text="Edit"
+            android:textAlignment="center"
+            android:textColor="@color/btn_color_1"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_todo_delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:background="@drawable/btn_todo_button"
+            android:text="Delete"
+            android:textAlignment="center"
+            android:textColor="@color/btn_color_1"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_todo_go_up"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:background="@drawable/btn_todo_buttom_right"
+            android:text="Go Up"
+            android:textAlignment="center"
+            android:textColor="@color/btn_color_1"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
 
 
 </LinearLayout>

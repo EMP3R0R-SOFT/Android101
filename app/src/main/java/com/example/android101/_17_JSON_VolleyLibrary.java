@@ -15,6 +15,7 @@ import com.android.volley.VolleyError;
 
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.example.android101._0_AppController.AppController;
+import com.example.android101.nonui.SetWall;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -25,6 +26,7 @@ public class _17_JSON_VolleyLibrary extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout._17__json__volley_library);
+        SetWall.set(this);
 
 
         Button btn1 = findViewById(R.id.btn_parse);

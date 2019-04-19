@@ -1,22 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/listlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="._18_toDo_json">
+    tools:context="._18_toDo._18_toDo_json">
 
-    <ListView
-        android:id="@+id/list_todo"
+    <RelativeLayout
+        android:id="@+id/todo_layout_for_alpha"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/todo_rview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="80dp"
+
+            android:scrollbars="vertical" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@id/todo_down_layout"
+            android:background="#99B9B9B9" />
+
+
+        <LinearLayout
+            android:id="@+id/todo_down_layout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/black60"
+            android:divider="#fff"
+            android:gravity="center"
+            android:orientation="horizontal"
+
+            >
+
+            <Button
+                android:id="@+id/toDO_btn_newToDo"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+
+                android:layout_marginRight="20dp"
+                android:background="@drawable/theme_dark_1_transparent"
+                android:text="New"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/btn_color_1"
+                android:textSize="14sp"
+
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/toDO_btn_check"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/theme_dark_1_transparent"
+                android:text="Check (Debug)"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/btn_color_1"
+                android:textSize="14sp"
+
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/todo_fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="4dp"
 
-        android:dividerHeight="4dp"
-        android:divider="#00000000"
-
-        android:scrollbars="none"
         />
-
-
 </RelativeLayout>

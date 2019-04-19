@@ -17,6 +17,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.android101.nonui.SetWall;
 import com.example.android101.nonui._15_jobService_Example;
 
 public class _15_JobScheduler extends Activity {
@@ -27,6 +28,7 @@ public class _15_JobScheduler extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout._15__job_scheduler);
+        SetWall.set(this);
 
         // چک کنه وضعیت سرویس رو که رانه یا نه
         setNum();

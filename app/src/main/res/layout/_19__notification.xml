@@ -4,20 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="._19_Notification"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    >
+    android:id="@+id/listlayout"
+    tools:context="._19_Notification">
 
     <EditText
-        android:layout_marginTop="20dp"
         android:id="@+id/edit_text_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/btn_color_1"
+        android:layout_marginTop="20dp"
         android:gravity="center"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:hint="Title"
         android:text="Android 101"
-        android:hint="Title"/>
+        android:textColor="@color/btn_color_1" />
 
     <EditText
 
@@ -25,44 +27,145 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textColor="@color/btn_color_1"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:hint="Message"
         android:text="Hi :)"
-        android:hint="Message"/>
+        android:textColor="@color/btn_color_1" />
 
 
-    <Button
-        android:id="@+id/button_notifi_1"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginTop="40dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
 
-        android:onClick="Show_Simple_Notifi_1"
-        android:background="@drawable/btn_theme_1"
-        android:textColor="@color/btn_color_1"
-        android:text="Simple Notification 1"
-        android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/button_notifi_2"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginTop="4dp"
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+>
 
-        android:onClick="Show_Simple_Notifi_2"
-        android:background="@drawable/btn_theme_1"
-        android:textColor="@color/btn_color_1"
-        android:text="Simple Notification 2"
-        android:textAllCaps="false" />
 
-    <Button
-    android:id="@+id/button_notifi_with_btn_1"
-    android:layout_width="match_parent"
-    android:layout_height="70dp"
-    android:layout_marginTop="4dp"
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
 
-    android:onClick="Show_Notifi_Clickable"
-    android:background="@drawable/btn_theme_1"
-    android:textColor="@color/btn_color_1"
-    android:text="+ Clickable"
-    android:textAllCaps="false" />
+                <Button
+
+                    android:id="@+id/button_notify_1"
+                    style="@style/_19_btn_style"
+                    android:onClick="Show_Simple_notify_1"
+                    android:text="Simple notifycation 1" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/button_notify_2"
+                    style="@style/_19_btn_style"
+                    android:onClick="Show_Simple_notify_2"
+                    android:text="Simple notifycation 2" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/button_notify_clickable"
+                    style="@style/_19_btn_style"
+                    android:onClick="Show_notify_Clickable"
+                    android:text="+ Clickable" />
+
+                <Button
+                    android:id="@+id/button_notify_with_btn"
+                    style="@style/_19_btn_style"
+                    android:onClick="Show_notify_with_btn"
+                    android:text="+ Button" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/button_notify_bigtext"
+                    style="@style/_19_btn_style"
+
+                    android:onClick="Show_notify_BigText"
+                    android:text="+ BigText + Logo" />
+
+                <Button
+                    android:id="@+id/button_notify_multiline"
+                    style="@style/_19_btn_style"
+                    android:onClick="Show_notify_Multiline"
+                    android:text="+ MultiLine" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/button_notify_big_picture"
+                    style="@style/_19_btn_style"
+
+
+                    android:onClick="Show_notify_BigPicture"
+                    android:text="+ Big Picture" />
+
+                <Button
+                    android:id="@+id/button_notify_progress"
+                    style="@style/_19_btn_style"
+
+                    android:onClick="Show_notify_Progress"
+                    android:text="+ Progress Bar" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/button_check"
+                    style="@style/_19_btn_style"
+                    android:onClick="Show_notify_Group"
+                    android:text="+6 Group Notify" />
+
+                <Button
+                    android:id="@+id/button_open_notifications_settings"
+                    style="@style/_19_btn_style"
+                    android:onClick="openNotificationSettings"
+                    android:text="Notification Settings" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/button_custom_notification"
+                    style="@style/_19_btn_style"
+                    android:onClick="show_custom_notification"
+                    android:text="Custom Notification" />
+
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
 </LinearLayout>

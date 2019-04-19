@@ -22,6 +22,7 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.android101._18_toDo._18_toDo_json;
 import com.example.android101.fragments.Countdown;
 import com.example.android101.fragments.functions;
 import com.example.android101.fragments.toDO;
@@ -159,9 +160,6 @@ public class _0_HomePage_Theme extends AppCompatActivity {
 
 
 
-
-
-        startActivity(new Intent(this, _19_Notification.class));
 
     }
 
