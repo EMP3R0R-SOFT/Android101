@@ -1,5 +1,7 @@
 package com.example.android101._18_toDo;
 
+
+import android.graphics.Typeface;
 import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentManager;
@@ -17,6 +19,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.android101.R;
 import com.example.android101.nonui.SetWall;
@@ -52,6 +55,7 @@ public class _18_toDo_json extends AppCompatActivity implements _19_ToDo_Frag_in
         activity_is_Blur = false;
 
 
+        Log.d("TAG", "oncreate " + activity_is_Blur);
         btn_new_toDo = findViewById(R.id.toDO_btn_newToDo);
         btn_check = findViewById(R.id.toDO_btn_check);
 
@@ -95,7 +99,7 @@ public class _18_toDo_json extends AppCompatActivity implements _19_ToDo_Frag_in
             @Override
             public void run() {
 
-                SystemClock.sleep(500);
+                SystemClock.sleep(250);
                 Entry_list.add(position, new _18_toDo_json.ListFormat(title, Description, false));
                 rcAdapter.notifyItemInserted(position);
 
@@ -113,10 +117,34 @@ public class _18_toDo_json extends AppCompatActivity implements _19_ToDo_Frag_in
 
     }
 
+    private void Modify_Alpha() {
+
+        RelativeLayout RL = findViewById(R.id.todo_layout_for_alpha);
+
+        if(activity_is_Blur){
+            activity_is_Blur= false;
+            RL.animate().alpha(1f).setDuration(500);
+
+        }else {
+            activity_is_Blur= true;
+            RL.animate().alpha(0f).setDuration(500);
+
+        }
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        Modify_Alpha();
+
+        super.onBackPressed();
+    }
+
 
     public void openFragment(String Title, String Description, int ID) {
 
 
+        Log.d("TAG", "open Fragment " + activity_is_Blur);
 
         _19_ToDo_Frag_input fragment = _19_ToDo_Frag_input.newInstance(Title, Description, ID);
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -128,42 +156,22 @@ public class _18_toDo_json extends AppCompatActivity implements _19_ToDo_Frag_in
         Modify_Alpha();
     }
 
-    private void Modify_Alpha() {
-
-        RelativeLayout RL = findViewById(R.id.todo_layout_for_alpha);
-
-        if(activity_is_Blur){
-            activity_is_Blur= false;
-            RL.animate().alpha(1f).setDuration(1000);
-
-        }else {
-            activity_is_Blur= true;
-            RL.animate().alpha(0.2f).setDuration(1000);
-
-        }
 
 
-
-    }
-
-    @Override
-    public void onBackPressed() {
-        Modify_Alpha();
-        super.onBackPressed();
-    }
 
     @Override
     public void onFragmentInteraction(String new_title, String new_Desc, int new_id) {
 
-        Log.d("TAG", "title:" + new_title + " desc: " + new_Desc + "id:" + new_id);
-        Modify_Alpha();
-
 
         if (new_id == -1) {
-            int ItemCount = rcAdapter.getItemCount();
-            insertItem(new_title, new_Desc, ItemCount);
-        } else {
 
+            if (new_title.equals("") && new_Desc.equals("")){
+                Toast.makeText(this, "Canceled", Toast.LENGTH_SHORT).show();
+            }else{
+                int ItemCount = rcAdapter.getItemCount();
+                insertItem(new_title, new_Desc, ItemCount);
+            }
+        } else {
 
             TextView tit1 = RC1.findViewHolderForAdapterPosition(new_id).itemView.findViewById(R.id.txt_todo_title);
             TextView des1 = RC1.findViewHolderForAdapterPosition(new_id).itemView.findViewById(R.id.txt_todo_text);
@@ -408,10 +416,15 @@ public class _18_toDo_json extends AppCompatActivity implements _19_ToDo_Frag_in
         @Override
         public void onBindViewHolder(@NonNull RC_ViewHolder rc_viewHolder, int position) {
 
+            Log.d("TAG","############################################################################### onBindViewHolder");
             // مقدار دهی میکنیم
             ListFormat currentItem = toDo_List.get(position);
             rc_viewHolder.txt_title.setText(currentItem.getItemTitle());
             rc_viewHolder.txt_text.setText(currentItem.getItemText());
+
+
+            rc_viewHolder.txt_title.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "fonts/yekan.ttf"));
+            rc_viewHolder.txt_text.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "fonts/yekan.ttf"));
         }
 
 

@@ -1,6 +1,7 @@
 package com.example.android101._18_toDo;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -27,6 +28,7 @@ public class _19_ToDo_Frag_input extends Fragment {
     EditText todo_frag_title;
     EditText todo_frag_Description;
     Button todo_frag_save;
+    Button toto_frag_cancel;
 
 
     public _19_ToDo_Frag_input() {
@@ -64,7 +66,10 @@ public class _19_ToDo_Frag_input extends Fragment {
         todo_frag_title = view.findViewById(R.id.todo_frag_input_title);
         todo_frag_Description = view.findViewById(R.id.todo_frag_input_description);
         todo_frag_save = view.findViewById(R.id.toDO__frag_btn_save);
+        toto_frag_cancel = view.findViewById(R.id.toDO__frag_btn_cancel);
 
+        todo_frag_title.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "fonts/yekan.ttf"));
+        todo_frag_Description.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "fonts/yekan.ttf"));
         todo_frag_title.setText(Recived_title);
         todo_frag_Description.setText(Recived_Description);
 
@@ -95,6 +100,12 @@ public class _19_ToDo_Frag_input extends Fragment {
             }
         });
 
+        toto_frag_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().onBackPressed();
+            }
+        });
 
         return view;
     }
