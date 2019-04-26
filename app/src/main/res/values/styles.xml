@@ -103,7 +103,7 @@
     </style>
 
     <style name="countdown_text_title">
-        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_width">75dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center</item>
 
@@ -118,7 +118,7 @@
 
         <item name="android:textColor">@color/btn_color_1</item>
         <item name="android:textAlignment">center</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:shadowDx">1</item>
         <item name="android:shadowDy">3</item>
@@ -129,8 +129,8 @@
     </style>
 
     <style name="countdown_text_value">
-        <item name="android:layout_width">90dp</item>
-        <item name="android:layout_height">90dp</item>
+        <item name="android:layout_width">75dp</item>
+        <item name="android:layout_height">75dp</item>
         <item name="android:layout_gravity">center</item>
 
         <item name="android:layout_marginBottom">4dp</item>
@@ -138,7 +138,7 @@
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/btn_color_1</item>
         <item name="android:textAlignment">center</item>
-        <item name="android:textSize">26sp</item>
+        <item name="android:textSize">24sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:shadowDx">1</item>
         <item name="android:shadowDy">3</item>
@@ -149,10 +149,11 @@
     </style>
 
 
-     <!--change TabLayout font size-->
+    <!--change TabLayout font size-->
     <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
         <item name="tabTextAppearance">@style/MyCustomTabText</item>
     </style>
+
     <style name="MyCustomTabText" parent="TextAppearance.AppCompat.Button">
         <item name="android:textSize">12sp</item>
         <item name="android:textStyle">bold</item>
@@ -180,8 +181,6 @@
     </style>
 
 
-
-
     <!--<style name="Transparent" parent="Theme.AppCompat.Light.NoActionBar">-->
 
     <!--<item name="android:windowNoTitle">true</item>-->
@@ -194,6 +193,33 @@
     <!--<item name="android:windowContentTransitions">true</item>-->
 
     <!--</style>-->
+
+    <style name="FloatingActionButton_Label">
+        <item name="android:background">@drawable/btn_theme_no_stroke</item>
+        <item name="android:textColor">@color/btn_color_1</item>
+
+        <item name="android:ellipsize">end</item>
+
+        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">80dp</item>
+
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+
+    <style name="MenuButtonsStyle">
+        <item name="fab_size">normal</item>
+        <item name="fab_shadowColor">#444</item>
+        <item name="fab_colorRipple">#00000000</item>
+    </style>
 
 
 </resources>

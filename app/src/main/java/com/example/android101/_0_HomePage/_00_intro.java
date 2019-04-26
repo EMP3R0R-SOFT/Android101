@@ -1,11 +1,11 @@
-package com.example.android101;
+package com.example.android101._0_HomePage;
 
 import android.content.Intent;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
+
+import com.example.android101.R;
 
 public class _00_intro extends AppCompatActivity {
 

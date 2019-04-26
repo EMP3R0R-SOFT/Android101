@@ -1,0 +1,43 @@
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android101._0_HomePage.toDO">
+
+    <TextView
+        android:id="@+id/todo_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+
+        android:background="@drawable/btn_theme_4"
+
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+
+        android:text="ToDo List"
+        android:textAlignment="center"
+        android:textColor="#BDBDBD"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/input_todo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/todo_title"
+
+
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/theme_dark_1"
+
+        android:gravity="start"
+        android:padding="15dp"
+        android:textColor="#BDBDBD" />
+
+</RelativeLayout>

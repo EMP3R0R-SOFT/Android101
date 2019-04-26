@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#262626"
-        tools:context="com.example.android101.Login_Page"
+        tools:context="com.example.android101._6_Login_Page"
         >
 
         <View

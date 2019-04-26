@@ -13,12 +13,12 @@ import android.view.Window;
 import android.view.WindowManager;
 
 
-public class _Login_Page_Splash extends AppCompatActivity {
+public class _6_Login_Page_Splash extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity__00_intro_2);
+        setContentView(R.layout._06_intro_loginpage);
 
         // کلاس شفاف سازی استاتوس و ناو
         transparentStatus();
@@ -30,10 +30,10 @@ public class _Login_Page_Splash extends AppCompatActivity {
             @Override
             public void run() {
 
-                Intent intent = new Intent(getBaseContext(), Login_Page.class);
+                Intent intent = new Intent(getBaseContext(), _6_Login_Page.class);
                 Pair<View,String> p1 =    Pair.create(findViewById(R.id.logo_intro_2),"anim_splash");
                 ActivityOptions option1 = ActivityOptions
-                        .makeSceneTransitionAnimation(_Login_Page_Splash.this,p1);
+                        .makeSceneTransitionAnimation(_6_Login_Page_Splash.this,p1);
                 startActivity(intent,option1.toBundle());
 
             }

@@ -76,7 +76,7 @@
                     android:id="@+id/button8"
                     style="@style/homepage_style_btn"
                     android:onClick="btn_Click"
-                    android:text="8 - Pass Data (using intent)" />
+                    android:text="9  10 - Pass Data (using intent)" />
 
                 <Button
                     android:id="@+id/button16"
@@ -108,13 +108,13 @@
                     android:id="@+id/button7"
                     style="@style/homepage_style_btn"
                     android:onClick="btn_Click"
-                    android:text="7 - Dynamic Buttons" />
+                    android:text="8 - Dynamic Buttons" />
 
                 <Button
                     android:id="@+id/button10"
                     style="@style/homepage_style_btn"
                     android:onClick="btn_Click"
-                    android:text="10 - Simple ListView" />
+                    android:text="11 - Simple ListView" />
 
             </LinearLayout>
 
@@ -132,7 +132,7 @@
                     android:id="@+id/button12"
                     style="@style/homepage_style_btn"
                     android:onClick="btn_Click"
-                    android:text="12 - Shared Element Activity Transition" />
+                    android:text="13 - Shared Element Activity Transition" />
 
                 <Button
                     android:id="@+id/button13"
@@ -155,7 +155,7 @@
                 <Button
                     android:id="@+id/button6"
                     style="@style/homepage_style_btn"
-                    android:text="6 - Async Task"
+                    android:text="7 - Async Task"
                     android:onClick="btn_Click"
                     android:textAllCaps="false" />
 
@@ -182,14 +182,21 @@
                     android:id="@+id/button17"
                     style="@style/homepage_style_btn"
                     android:onClick="btn_Click"
-                    android:text="17 - json (volley library)"
+                    android:text="17 - Parse JSON (volley)"
                     android:textAllCaps="false" />
 
                 <Button
                     android:id="@+id/button18"
                     style="@style/homepage_style_btn"
                     android:onClick="btn_Click"
-                    android:text="18 - toDo from JSON"
+                    android:text="18 - TODO"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/button20"
+                    style="@style/homepage_style_btn"
+                    android:text="20 - REST API"
+                    android:onClick="btn_Click"
                     android:textAllCaps="false" />
 
             </LinearLayout>
@@ -215,7 +222,7 @@
                 <Button
                     android:id="@+id/button9"
                     style="@style/homepage_style_btn"
-                    android:text="9 - Send Email"
+                    android:text="0 - Send Email"
                     android:onClick="btn_Click"
                     android:textAllCaps="false" />
 
@@ -223,7 +230,7 @@
                 <Button
                     android:id="@+id/button11"
                     style="@style/homepage_style_btn"
-                    android:text="11 - Play Video"
+                    android:text="12 - Play Video"
                     android:onClick="btn_Click"
                     android:textAllCaps="false" />
 
@@ -243,12 +250,6 @@
                     android:onClick="btn_Click"
                     android:textAllCaps="false" />
 
-                <Button
-                    android:id="@+id/button20"
-                    style="@style/homepage_style_btn"
-                    android:text="Empty"
-                    android:onClick="btn_Click"
-                    android:textAllCaps="false" />
 
                 <Button
                     android:id="@+id/button21"

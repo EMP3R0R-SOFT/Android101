@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android101.fragments.Countdown">
+    tools:context="com.example.android101._0_HomePage.Countdown">
 
     <RelativeLayout
         android:id="@+id/navdraw1"
@@ -12,10 +12,10 @@
         android:layout_centerHorizontal="true"
         android:background="@drawable/theme_dark_1"
 
-        android:layout_marginBottom="160dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginBottom="140dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
 
         android:paddingTop="20dp"
         android:paddingBottom="20dp"
@@ -94,8 +94,6 @@
             />
 
 
-
-
         <TextView
             android:id="@+id/countdown_page_4"
 
@@ -150,10 +148,11 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="130dp"
+        android:layout_height="110dp"
         android:layout_marginBottom="15dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+
         android:orientation="horizontal">
 
         <LinearLayout
@@ -223,6 +222,23 @@
                 android:id="@+id/title_seconds"
                 style="@style/countdown_text_title"
                 android:text="Seconds" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_prog"
+                style="@style/countdown_text_value"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/title_prog"
+                style="@style/countdown_text_title"
+                android:text="Progress" />
 
         </LinearLayout>
 

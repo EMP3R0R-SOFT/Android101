@@ -23,7 +23,7 @@ public class _3_UseClass2_example extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_use_class2_example);
+        setContentView(R.layout._03_use_class2_example);
 
         SetWall.set(this);
 

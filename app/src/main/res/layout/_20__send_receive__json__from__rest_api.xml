@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/listlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="._20_SendReceive_Json_From_RestAPI">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="false"
+        android:layout_margin="32dp"
+        android:orientation="vertical"
+
+        >
+
+
+        <TextView
+            android:id="@+id/_20_txt1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/theme_dark_1"
+            android:gravity="center"
+            android:hint="Results"
+            android:padding="16dp"
+            android:textColor="@color/btn_color_1"
+            android:textColorHint="#33FFFFFF"
+
+            />
+
+        <EditText
+            android:id="@+id/_20_editor"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/_20_txt1"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/theme_dark_1"
+            android:gravity="center"
+            android:hint="Enter Text"
+            android:textColor="@color/btn_color_1"
+            android:textColorHint="#33FFFFFF"
+            android:textSize="14sp"
+
+            />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:indeterminate="true"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/_18__down_layout"
+        android:background="#99B9B9B9" />
+
+
+    <LinearLayout
+        android:id="@+id/_18__down_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black60"
+        android:divider="#fff"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/_20_send"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+
+            android:background="@drawable/btn_todo_button"
+            android:text="Send"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/btn_color_1"
+            android:textSize="14sp"
+
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/_20_Recive"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+
+            android:background="@drawable/btn_todo_button"
+            android:text="Receive"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/btn_color_1"
+            android:textSize="14sp"
+
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

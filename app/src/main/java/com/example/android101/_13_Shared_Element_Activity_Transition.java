@@ -34,7 +34,7 @@ public class _13_Shared_Element_Activity_Transition extends AppCompatActivity {
         Pair<View,String> p1 =    Pair.create(findViewById(R.id.shared_img_1),"boomboom1");
         Pair<View,String> p2 =    Pair.create(findViewById(R.id.shared_txt_1),"boomboom2");
         ActivityOptions option1 = ActivityOptions
-                .makeSceneTransitionAnimation(_13_Shared_Element_Activity_Transition.this,p1,p2); // Login_Page.this , p1,p2,p3 .....);
+                .makeSceneTransitionAnimation(_13_Shared_Element_Activity_Transition.this,p1,p2); // _6_Login_Page.this , p1,p2,p3 .....);
         startActivity(intent,option1.toBundle());
 
         //overridePendingTransition(0,0);

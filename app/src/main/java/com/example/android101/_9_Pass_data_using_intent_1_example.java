@@ -17,7 +17,7 @@ public class _9_Pass_data_using_intent_1_example extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pass_data_using_intent_1_example);
+        setContentView(R.layout._09_pass_data_using_intent_1_example);
 
         SetWall.set(this);
 

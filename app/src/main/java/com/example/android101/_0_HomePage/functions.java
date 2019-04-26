@@ -1,4 +1,4 @@
-package com.example.android101.fragments;
+package com.example.android101._0_HomePage;
 
 
 import android.os.Bundle;
@@ -142,7 +142,7 @@ public class functions extends Fragment {
 //        button13.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
-//                startActivity(new Intent(getContext(), _Login_Page_Splash.class));
+//                startActivity(new Intent(getContext(), _6_Login_Page_Splash.class));
 //            }
 //        });
 //

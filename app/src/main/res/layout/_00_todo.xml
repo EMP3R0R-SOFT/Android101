@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android101._0_HomePage.toDO">
+
+    <RelativeLayout
+        android:id="@+id/_00_todo_layout_for_alpha"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:srlAccentColor="@color/btn_color_1"
+            app:srlPrimaryColor="#99000000">
+
+            <com.scwang.smartrefresh.header.BezierCircleHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/_00_todo_rc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:scrollbars="vertical" />
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+
+
+        <ProgressBar
+            android:id="@+id/_00_progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="-7dp"
+            android:indeterminate="true"
+            android:visibility="visible" />
+
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/_00_FAB_Menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:paddingRight="5dp"
+
+
+            app:menu_animationDelayPerItem="50"
+            app:menu_backgroundColor="@color/black60"
+
+            app:menu_buttonSpacing="5dp"
+            app:menu_colorNormal="#801D1D1D"
+            app:menu_colorPressed="#8F8F8F"
+            app:menu_colorRipple="#99FFFFFF"
+
+            app:menu_fab_hide_animation="@anim/fab_scale_down"
+            app:menu_fab_show_animation="@anim/fab_scale_up"
+            app:menu_fab_size="mini"
+            app:menu_icon="@drawable/ic_edit_white_24dp"
+            app:menu_labels_style="@style/FloatingActionButton_Label"
+
+            app:menu_openDirection="up"
+
+            app:menu_shadowColor="#66000000"
+            app:menu_shadowRadius="4dp"
+            app:menu_shadowXOffset="1dp"
+            app:menu_shadowYOffset="3dp"
+            app:menu_showShadow="true">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/_00_fab_add"
+                style="@style/MenuButtonsStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_edit_white_24dp"
+                app:fab_colorNormal="#50b04e"
+                app:fab_colorPressed="#50b04e"
+                app:fab_label="New TODO"
+
+                />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/_00_fab_save"
+                style="@style/MenuButtonsStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_save_white_24dp"
+                app:fab_colorNormal="#e95c53"
+                app:fab_colorPressed="#e95c53"
+                app:fab_label="Save to Cloud" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/_00_fab_refresh"
+                style="@style/MenuButtonsStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_refresh_white_24dp"
+                app:fab_colorNormal="#62a8e4"
+                app:fab_colorPressed="#62a8e4"
+                app:fab_label="Refresh List" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/_00_fab_dummy"
+                style="@style/MenuButtonsStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_bug_white_24dp"
+                app:fab_colorNormal="#fb8e27"
+                app:fab_colorPressed="#fb8e27"
+                app:fab_label="Dummy Entry" />
+
+
+        </com.github.clans.fab.FloatingActionMenu>
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/_00_input_fragment_container_"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

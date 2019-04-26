@@ -34,4 +34,6 @@
         android:background="@drawable/bottom_navigation"
         app:tabMode="fixed" />
 
+
+
 </RelativeLayout>

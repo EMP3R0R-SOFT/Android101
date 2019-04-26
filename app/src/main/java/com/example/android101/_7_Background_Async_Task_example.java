@@ -17,7 +17,7 @@ public class _7_Background_Async_Task_example extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_background__async__task_example);
+        setContentView(R.layout._07_background__async__task_example);
 
         SetWall.set(this);
 

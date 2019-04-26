@@ -27,7 +27,7 @@ public class _4_ListView_example extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_view_example);
+        setContentView(R.layout._04_list_view_example);
 
         SetWall.set(this);
 
@@ -65,7 +65,7 @@ public class _4_ListView_example extends AppCompatActivity {
 
         // alt + enter  میزنیم پایینی رو میسازه
         public adapter1() {
-            super(getBaseContext(), R.layout.list_item_layout,mylist);
+            super(getBaseContext(), R.layout._04_list_item_layout,mylist);
         }
 
         // alt = ins
@@ -78,7 +78,7 @@ public class _4_ListView_example extends AppCompatActivity {
             // مطمئن مشیشم که یه view وجود داره چون ممکنه جواب null بده
             View shitView = convertView;
             if (shitView==null){
-                shitView=getLayoutInflater().inflate(R.layout.list_item_layout,parent,false);
+                shitView=getLayoutInflater().inflate(R.layout._04_list_item_layout,parent,false);
             }
 
             //  پیدا کردن آیتم های لیست با فرمت اون کلاسه که ساختیم

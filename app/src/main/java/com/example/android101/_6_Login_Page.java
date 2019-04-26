@@ -29,9 +29,10 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 
 
+import com.example.android101._0_HomePage._0_HomePage_Theme;
 import com.example.android101.databinding.LoginPageBinding;
 
-public class Login_Page extends AppCompatActivity {
+public class _6_Login_Page extends AppCompatActivity {
 
 
     private LoginPageBinding binding1;
@@ -191,7 +192,7 @@ public class Login_Page extends AppCompatActivity {
                 Intent intent = new Intent(getBaseContext(), _0_HomePage_Theme.class);
                 Pair<View,String> p1 =    Pair.create(findViewById(R.id.logo_1),"shitAnim");
 
-                ActivityOptions option1 = ActivityOptions.makeSceneTransitionAnimation(Login_Page.this,p1); // Login_Page.this , p1,p2,p3 .....);
+                ActivityOptions option1 = ActivityOptions.makeSceneTransitionAnimation(_6_Login_Page.this,p1); // _6_Login_Page.this , p1,p2,p3 .....);
                 startActivity(intent,option1.toBundle());
 
                 //overridePendingTransition(0,0);

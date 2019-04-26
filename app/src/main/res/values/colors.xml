@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#949494</color>
     <color name="MyGreen">#2ACA07</color>
     <color name="MyRED">#E90C0C</color>
     <color name="Gray">#727272</color>
@@ -11,8 +11,15 @@
     <color name="Transparent">#00000000</color>
 
     <color name="black20">#33000000</color>
+    <color name="black30">#4D000000</color>
     <color name="black40">#66000000</color>
     <color name="black70">#B3000000</color>
     <color name="black60">#99000000</color>
+
+
+
+
+
+
 
 </resources>

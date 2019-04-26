@@ -22,7 +22,7 @@ public class _8_Dynamic_Buttons_example extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dynamic__buttons_example);
+        setContentView(R.layout._08_dynamic__buttons_example);
 
 
         SetWall.set(this);

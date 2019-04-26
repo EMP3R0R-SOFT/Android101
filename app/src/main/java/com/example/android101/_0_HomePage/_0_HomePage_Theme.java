@@ -1,4 +1,4 @@
-package com.example.android101;
+package com.example.android101._0_HomePage;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -9,6 +9,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,16 +23,83 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.android101.R;
+import com.example.android101._6_Login_Page_Splash;
+import com.example.android101._11_Simple_ListView;
+import com.example.android101._12_Play_Video;
+import com.example.android101._13_Shared_Element_Activity_Transition;
+import com.example.android101._14_Miladi_be_Shamsi;
+import com.example.android101._15_JobScheduler;
+import com.example.android101._17_JSON_VolleyLibrary;
 import com.example.android101._18_toDo._18_toDo_json;
-import com.example.android101.fragments.Countdown;
-import com.example.android101.fragments.functions;
-import com.example.android101.fragments.toDO;
+import com.example.android101._19_Notification;
+import com.example.android101._1_SharedPreferences_example;
+import com.example.android101._20_SendReceive_Json_From_RestAPI;
+import com.example.android101._2_UseClass_example;
+import com.example.android101._3_UseClass2_example;
+import com.example.android101._4_ListView_example;
+import com.example.android101._5_Dialog_Alert_example;
+import com.example.android101._7_Background_Async_Task_example;
+import com.example.android101._8_Dynamic_Buttons_example;
+import com.example.android101._9_Pass_data_using_intent_1_example;
 import com.example.android101.nonui.SetWall;
 
 
-public class _0_HomePage_Theme extends AppCompatActivity {
+public class _0_HomePage_Theme extends AppCompatActivity implements toDo_frag_input.OnFragmentInteractionListener {
+
+    ViewPager viewPager;
+    Myadapter myadapter;
+    TabLayout tabLayout;
 
 
+
+    //-----------------------------------------------------------------------------------------------------------------------
+    public void openInput(String Title, String Description, int ID) {
+
+        toDo_frag_input fragment_input = toDo_frag_input.newInstance(Title, Description, ID);
+        FragmentManager fragManager = getSupportFragmentManager();
+        FragmentTransaction transaction_input = fragManager.beginTransaction();
+        transaction_input.setCustomAnimations(R.anim.fade_in_250, R.anim.fade_out_250, R.anim.fade_in_250, R.anim.fade_out_250);
+        transaction_input.addToBackStack(null); // وقتی تو فرگمنت دکمه بک بزنیم فقط فرمگمن بسته شه نه اکتیویتی
+        transaction_input.add(R.id._00_input_fragment_container_, fragment_input, "TAG");
+        transaction_input.commit();
+
+    }
+
+
+    @Override
+    public void onFragmentInteraction(String new_title, String new_Desc, int new_id) {
+
+        Fragment page = getSupportFragmentManager().findFragmentByTag("android:switcher:" + R.id.pager + ":" + 2);
+        toDO ff = (toDO) page;
+        ff.feedback_from_mainActivity(new_title, new_Desc, new_id);
+
+    }
+
+
+    @Override
+    public void onBackPressed() {
+
+
+        int count = getSupportFragmentManager().getBackStackEntryCount();
+
+        if (count == 0) {
+            super.onBackPressed();
+            //additional code
+        } else {
+            getSupportFragmentManager().popBackStack();
+
+            Fragment page = getSupportFragmentManager().findFragmentByTag("android:switcher:" + R.id.pager + ":" + 2);
+            toDO ff = (toDO) page;
+            ff.Modify_Alpha();
+
+        }
+
+    }
+
+
+
+    //-----------------------------------------------------------------------------------------------------------------------
     public class Myadapter extends FragmentPagerAdapter {
 
         public Myadapter(FragmentManager fm) {
@@ -46,16 +114,13 @@ public class _0_HomePage_Theme extends AppCompatActivity {
             switch (position) {
 
                 case 0:
-                    functions t1 = new functions();
-                    return t1;
+                    return new functions();
 
                 case 1:
-                    Countdown t2 = new Countdown();
-                    return t2;
+                    return new Countdown();
 
                 default:
-                    toDO t3 = new toDO();
-                    return t3;
+                    return new toDO();
             }
         }
 
@@ -103,11 +168,13 @@ public class _0_HomePage_Theme extends AppCompatActivity {
 
         // new content
         //------------------------------------------------------------------------------------------------------------------
-        ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
-        Myadapter myadapter = new Myadapter(getSupportFragmentManager());
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabber);
+        viewPager = findViewById(R.id.pager);
+        myadapter = new Myadapter(getSupportFragmentManager());
+        tabLayout = findViewById(R.id.tabber);
+        viewPager.setOffscreenPageLimit(2); // vase inke vaghti tab click kardi az aval fragmento reload nakone ( 2 = tedade page ha)
         tabLayout.setupWithViewPager(viewPager);
         viewPager.setAdapter(myadapter);
+
         viewPager.setCurrentItem(1); // وقنی برنامه باز شد کدوم صفحه به صورت پیشفرض نمایش داده بشه (صفحه دوم)
 
         // tanzime icon e tabbar
@@ -159,12 +226,10 @@ public class _0_HomePage_Theme extends AppCompatActivity {
         setTypeFace_findViews(p1);
 
 
-
-
     }
 
 
-    public void btn_Click(View v){
+    public void btn_Click(View v) {
 
 
         switch (v.getId()) {
@@ -224,7 +289,7 @@ public class _0_HomePage_Theme extends AppCompatActivity {
                 break;
 
             case R.id.button13:
-                startActivity(new Intent(this, _Login_Page_Splash.class));
+                startActivity(new Intent(this, _6_Login_Page_Splash.class));
                 break;
 
             case R.id.button14:
@@ -248,6 +313,10 @@ public class _0_HomePage_Theme extends AppCompatActivity {
 
             case R.id.button19:
                 startActivity(new Intent(this, _19_Notification.class));
+                break;
+
+            case R.id.button20:
+                startActivity(new Intent(this, _20_SendReceive_Json_From_RestAPI.class));
                 break;
 
             default:

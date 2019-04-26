@@ -3,29 +3,29 @@
     android:color="#80000000">
 
 
-<item>
+    <item>
 
-<shape
-    android:shape="rectangle" android:padding="10dp">
-
-
-
-    <solid android:color="#66000000"/>
-
-    <!--<gradient-->
-        <!--android:startColor="#1E88E5"-->
-        <!--android:endColor="#18289B"-->
-        <!--android:angle="90"-->
-        <!--/>-->
-
-    <!--<corners android:radius="5dp"/>-->
+        <shape
+            android:padding="10dp"
+            android:shape="rectangle">
 
 
-    <!--<stroke-->
-        <!--android:width="2dp"-->
-        <!--android:color="#80000000"-->
-        <!--/>-->
+            <solid android:color="#66000000" />
 
-</shape>
-</item>
+            <!--<gradient-->
+            <!--android:startColor="#1E88E5"-->
+            <!--android:endColor="#18289B"-->
+            <!--android:angle="90"-->
+            <!--/>-->
+
+            <!--<corners android:radius="5dp"/>-->
+
+
+            <!--<stroke-->
+            <!--android:width="2dp"-->
+            <!--android:color="#80000000"-->
+            <!--/>-->
+
+        </shape>
+    </item>
 </ripple>
